@@ -1,0 +1,2081 @@
+[
+    {
+    "id": "knee_01_rf_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Rectus femoris",
+    "stem": "Which positioning most effectively stretches the rectus femoris muscle?",
+    "choices": [
+    {
+    "text": "Knee flexion combined with hip extension while maintaining a posterior pelvic tilt",
+    "isCorrect": true,
+    "explain": "Rectus femoris crosses the hip and knee and performs hip flexion and knee extension; stretching requires hip extension and knee flexion with pelvic control to prevent lumbar substitution."
+    },
+    {
+    "text": "Knee extension with hip flexion",
+    "isCorrect": false,
+    "explain": "Both movements correspond to the primary actions of rectus femoris and therefore shorten the muscle."
+    },
+    {
+    "text": "Hip flexion with the knee flexed",
+    "isCorrect": false,
+    "explain": "Hip flexion shortens the muscle proximally, reducing overall lengthening."
+    },
+    {
+    "text": "Knee flexion with anterior pelvic tilt",
+    "isCorrect": false,
+    "explain": "Anterior pelvic tilt places the rectus femoris in a shortened position at the hip."
+    }
+    ],
+    "tags": ["rectus femoris", "quadriceps", "knee stretch"]
+    },
+    {
+    "id": "knee_02_rf_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Rectus femoris",
+    "stem": "Which exercise best strengthens the rectus femoris?",
+    "choices": [
+    {
+    "text": "Resisted knee extension performed with the hip in slight flexion",
+    "isCorrect": true,
+    "explain": "Resisted knee extension recruits all quadriceps heads, and slight hip flexion increases rectus femoris contribution due to its biarticular role."
+    },
+    {
+    "text": "Passive knee flexion stretch",
+    "isCorrect": false,
+    "explain": "Passive stretching does not create a strengthening stimulus."
+    },
+    {
+    "text": "Hip extension with the knee flexed",
+    "isCorrect": false,
+    "explain": "This movement reduces rectus femoris activation."
+    },
+    {
+    "text": "Isometric hip adduction",
+    "isCorrect": false,
+    "explain": "Hip adduction does not involve rectus femoris."
+    }
+    ],
+    "tags": ["rectus femoris", "knee extension", "strength"]
+    },
+    {
+    "id": "knee_03_vl_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Vastus lateralis",
+    "stem": "Which movement best stretches the vastus lateralis?",
+    "choices": [
+    {
+    "text": "Passive knee flexion within a pain-free range",
+    "isCorrect": true,
+    "explain": "Vastus lateralis is a monoarticular knee extensor and is lengthened by knee flexion."
+    },
+    {
+    "text": "Hip extension with knee extended",
+    "isCorrect": false,
+    "explain": "Vastus lateralis does not cross the hip joint."
+    },
+    {
+    "text": "Terminal knee extension",
+    "isCorrect": false,
+    "explain": "Terminal knee extension strengthens rather than stretches the muscle."
+    },
+    {
+    "text": "Isometric quadriceps contraction",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not change muscle length."
+    }
+    ],
+    "tags": ["vastus lateralis", "quadriceps", "knee flexion"]
+    },
+    {
+    "id": "knee_04_vl_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Vastus lateralis",
+    "stem": "Which exercise best strengthens the vastus lateralis?",
+    "choices": [
+    {
+    "text": "Resisted knee extension through mid-range",
+    "isCorrect": true,
+    "explain": "Vastus lateralis is a primary knee extensor and is activated during resisted knee extension."
+    },
+    {
+    "text": "Passive knee flexion hold",
+    "isCorrect": false,
+    "explain": "Passive positioning does not strengthen muscle."
+    },
+    {
+    "text": "Hip abduction against resistance",
+    "isCorrect": false,
+    "explain": "Hip abduction does not involve vastus lateralis."
+    },
+    {
+    "text": "Ankle dorsiflexion exercises",
+    "isCorrect": false,
+    "explain": "Ankle dorsiflexion does not recruit quadriceps muscles."
+    }
+    ],
+    "tags": ["vastus lateralis", "knee extension", "strength"]
+    },
+    {
+    "id": "knee_05_vm_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Vastus medialis",
+    "stem": "Which movement appropriately stretches the vastus medialis?",
+    "choices": [
+    {
+    "text": "Passive knee flexion",
+    "isCorrect": true,
+    "explain": "Vastus medialis is a monoarticular knee extensor and is lengthened during knee flexion."
+    },
+    {
+    "text": "Terminal knee extension",
+    "isCorrect": false,
+    "explain": "Terminal knee extension strengthens vastus medialis."
+    },
+    {
+    "text": "Hip adduction with knee extended",
+    "isCorrect": false,
+    "explain": "Vastus medialis does not cross the hip."
+    },
+    {
+    "text": "Isometric quadriceps set",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle tissue."
+    }
+    ],
+    "tags": ["vastus medialis", "VMO", "knee flexion"]
+    },
+    {
+    "id": "knee_06_vm_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Vastus medialis",
+    "stem": "Which exercise best emphasizes strengthening of the vastus medialis?",
+    "choices": [
+    {
+    "text": "Terminal knee extension in standing or supine",
+    "isCorrect": true,
+    "explain": "Vastus medialis is highly active during terminal knee extension for patellar stabilization."
+    },
+    {
+    "text": "Passive knee flexion stretch",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip external rotation exercise",
+    "isCorrect": false,
+    "explain": "Hip external rotation does not recruit vastus medialis."
+    },
+    {
+    "text": "Ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "Plantarflexion recruits calf muscles, not quadriceps."
+    }
+    ],
+    "tags": ["vastus medialis", "patellar stability", "strength"]
+    },
+    {
+    "id": "knee_07_vi_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Vastus intermedius",
+    "stem": "How is the vastus intermedius best stretched?",
+    "choices": [
+    {
+    "text": "Passive knee flexion",
+    "isCorrect": true,
+    "explain": "Vastus intermedius is a monoarticular knee extensor and is lengthened during knee flexion."
+    },
+    {
+    "text": "Hip extension with knee extended",
+    "isCorrect": false,
+    "explain": "This muscle does not cross the hip."
+    },
+    {
+    "text": "Terminal knee extension",
+    "isCorrect": false,
+    "explain": "This is a strengthening action."
+    },
+    {
+    "text": "Isometric quadriceps contraction",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not lengthen muscle."
+    }
+    ],
+    "tags": ["vastus intermedius", "quadriceps", "knee stretch"]
+    },
+    {
+    "id": "knee_08_vi_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Vastus intermedius",
+    "stem": "Which exercise strengthens the vastus intermedius?",
+    "choices": [
+    {
+    "text": "Resisted knee extension",
+    "isCorrect": true,
+    "explain": "Vastus intermedius is a primary knee extensor activated during knee extension."
+    },
+    {
+    "text": "Passive knee flexion",
+    "isCorrect": false,
+    "explain": "Passive movement does not strengthen muscle."
+    },
+    {
+    "text": "Hip flexion exercise",
+    "isCorrect": false,
+    "explain": "Hip flexion does not involve vastus intermedius."
+    },
+    {
+    "text": "Ankle dorsiflexion",
+    "isCorrect": false,
+    "explain": "Ankle dorsiflexion does not recruit quadriceps."
+    }
+    ],
+    "tags": ["vastus intermedius", "knee extension", "strength"]
+    },
+    {
+    "id": "knee_09_bflh_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Biceps femoris (long head)",
+    "stem": "Which position best stretches the long head of the biceps femoris?",
+    "choices": [
+    {
+    "text": "Hip flexion combined with knee extension",
+    "isCorrect": true,
+    "explain": "The long head performs hip extension and knee flexion; stretching requires hip flexion and knee extension."
+    },
+    {
+    "text": "Hip extension with knee flexion",
+    "isCorrect": false,
+    "explain": "This matches the muscle’s primary actions."
+    },
+    {
+    "text": "Hip flexion with knee flexed",
+    "isCorrect": false,
+    "explain": "Knee flexion limits hamstring lengthening."
+    },
+    {
+    "text": "Knee flexion with tibial ER",
+    "isCorrect": false,
+    "explain": "Knee flexion shortens the biceps femoris."
+    }
+    ],
+    "tags": ["biceps femoris", "hamstrings", "knee stretch"]
+    },
+    {
+    "id": "knee_10_bflh_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Biceps femoris (long head)",
+    "stem": "Which exercise best strengthens the long head of the biceps femoris?",
+    "choices": [
+    {
+    "text": "Resisted knee flexion with the hip in neutral",
+    "isCorrect": true,
+    "explain": "The long head contributes strongly to knee flexion, especially when the hip is neutral or extended."
+    },
+    {
+    "text": "Passive hamstring stretch",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip flexion against resistance",
+    "isCorrect": false,
+    "explain": "Hip flexion is not an action of biceps femoris."
+    },
+    {
+    "text": "Ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "Plantarflexion recruits calf muscles."
+    }
+    ],
+    "tags": ["biceps femoris", "knee flexion", "strength"]
+    },
+    {
+    "id": "knee_11_bfsh_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Biceps femoris (short head)",
+    "stem": "How is the short head of the biceps femoris best stretched?",
+    "choices": [
+    {
+    "text": "Knee extension",
+    "isCorrect": true,
+    "explain": "The short head is monoarticular and acts only to flex the knee; knee extension lengthens it."
+    },
+    {
+    "text": "Hip flexion with knee extended",
+    "isCorrect": false,
+    "explain": "The short head does not cross the hip."
+    },
+    {
+    "text": "Hip extension with knee flexed",
+    "isCorrect": false,
+    "explain": "This shortens the muscle."
+    },
+    {
+    "text": "Isometric knee flexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["biceps femoris", "knee stretch", "hamstrings"]
+    },
+    {
+    "id": "knee_12_bfsh_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Biceps femoris (short head)",
+    "stem": "Which exercise strengthens the short head of the biceps femoris?",
+    "choices": [
+    {
+    "text": "Resisted knee flexion",
+    "isCorrect": true,
+    "explain": "The short head contributes to knee flexion and is strengthened during resisted knee flexion."
+    },
+    {
+    "text": "Hip extension exercise",
+    "isCorrect": false,
+    "explain": "The short head does not act at the hip."
+    },
+    {
+    "text": "Passive knee extension",
+    "isCorrect": false,
+    "explain": "Passive movement does not strengthen muscle."
+    },
+    {
+    "text": "Ankle dorsiflexion",
+    "isCorrect": false,
+    "explain": "Ankle dorsiflexion does not recruit hamstrings."
+    }
+    ],
+    "tags": ["biceps femoris", "knee flexion", "strength"]
+    },
+    {
+    "id": "knee_13_semiten_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Semitendinosus",
+    "stem": "Which movement best stretches the semitendinosus?",
+    "choices": [
+    {
+    "text": "Hip flexion with knee extension and slight tibial external rotation",
+    "isCorrect": true,
+    "explain": "Semitendinosus performs hip extension, knee flexion, and tibial internal rotation; opposite positioning lengthens it."
+    },
+    {
+    "text": "Hip extension with knee flexion",
+    "isCorrect": false,
+    "explain": "This reproduces the muscle’s primary actions."
+    },
+    {
+    "text": "Knee flexion with tibial internal rotation",
+    "isCorrect": false,
+    "explain": "This shortens the muscle."
+    },
+    {
+    "text": "Isometric hip adduction",
+    "isCorrect": false,
+    "explain": "Hip adduction does not stretch semitendinosus."
+    }
+    ],
+    "tags": ["semitendinosus", "hamstrings", "knee stretch"]
+    },
+    {
+    "id": "knee_14_semiten_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Semitendinosus",
+    "stem": "Which exercise strengthens the semitendinosus?",
+    "choices": [
+    {
+    "text": "Resisted knee flexion with slight tibial internal rotation",
+    "isCorrect": true,
+    "explain": "Semitendinosus contributes to knee flexion and tibial internal rotation."
+    },
+    {
+    "text": "Passive hamstring stretch",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip flexion against resistance",
+    "isCorrect": false,
+    "explain": "Hip flexion is not a hamstring action."
+    },
+    {
+    "text": "Ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "Plantarflexion does not recruit hamstrings."
+    }
+    ],
+    "tags": ["semitendinosus", "knee flexion", "strength"]
+    },
+    {
+    "id": "knee_15_semimem_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Semimembranosus",
+    "stem": "Which position best stretches the semimembranosus?",
+    "choices": [
+    {
+    "text": "Hip flexion with knee extension and tibial external rotation",
+    "isCorrect": true,
+    "explain": "Semimembranosus performs hip extension, knee flexion, and tibial internal rotation; the opposite positioning stretches it."
+    },
+    {
+    "text": "Hip extension with knee flexion",
+    "isCorrect": false,
+    "explain": "This shortens the muscle."
+    },
+    {
+    "text": "Knee flexion with tibial internal rotation",
+    "isCorrect": false,
+    "explain": "This reproduces the muscle’s action."
+    },
+    {
+    "text": "Isometric knee flexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["semimembranosus", "hamstrings", "knee stretch"]
+    },
+    {
+    "id": "knee_16_semimem_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Semimembranosus",
+    "stem": "Which exercise best strengthens the semimembranosus?",
+    "choices": [
+    {
+    "text": "Resisted knee flexion with tibial internal rotation",
+    "isCorrect": true,
+    "explain": "Semimembranosus assists knee flexion and tibial internal rotation."
+    },
+    {
+    "text": "Passive hamstring stretching",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip flexion exercise",
+    "isCorrect": false,
+    "explain": "Hip flexion is not an action of semimembranosus."
+    },
+    {
+    "text": "Ankle dorsiflexion",
+    "isCorrect": false,
+    "explain": "Ankle dorsiflexion does not involve hamstrings."
+    }
+    ],
+    "tags": ["semimembranosus", "knee flexion", "strength"]
+    },
+    {
+    "id": "knee_17_sartorius_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Sartorius",
+    "stem": "Which positioning best stretches the sartorius muscle?",
+    "choices": [
+    {
+    "text": "Hip extension, adduction, and internal rotation with knee extension",
+    "isCorrect": true,
+    "explain": "Sartorius assists hip flexion, abduction, external rotation, and knee flexion; opposite movements stretch it."
+    },
+    {
+    "text": "Hip flexion and external rotation with knee flexion",
+    "isCorrect": false,
+    "explain": "This matches the muscle’s primary actions."
+    },
+    {
+    "text": "Hip abduction with knee flexion",
+    "isCorrect": false,
+    "explain": "This shortens sartorius."
+    },
+    {
+    "text": "Isometric knee flexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["sartorius", "knee stretch", "hip muscle"]
+    },
+    {
+    "id": "knee_18_sartorius_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Sartorius",
+    "stem": "Which exercise strengthens the sartorius?",
+    "choices": [
+    {
+    "text": "Resisted knee flexion combined with tibial internal rotation",
+    "isCorrect": true,
+    "explain": "Sartorius assists knee flexion and tibial internal rotation."
+    },
+    {
+    "text": "Passive knee extension",
+    "isCorrect": false,
+    "explain": "Passive movement does not strengthen muscle."
+    },
+    {
+    "text": "Hip adduction against resistance",
+    "isCorrect": false,
+    "explain": "Hip adduction is not a sartorius action."
+    },
+    {
+    "text": "Ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "Plantarflexion does not involve sartorius."
+    }
+    ],
+    "tags": ["sartorius", "knee flexion", "strength"]
+    },
+    {
+    "id": "knee_19_gracilis_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Gracilis",
+    "stem": "Which position best stretches the gracilis muscle?",
+    "choices": [
+    {
+    "text": "Hip abduction with knee extension",
+    "isCorrect": true,
+    "explain": "Gracilis performs hip adduction and knee flexion; hip abduction and knee extension stretch it."
+    },
+    {
+    "text": "Hip adduction with knee flexion",
+    "isCorrect": false,
+    "explain": "This shortens gracilis."
+    },
+    {
+    "text": "Hip flexion with knee flexion",
+    "isCorrect": false,
+    "explain": "This does not lengthen gracilis."
+    },
+    {
+    "text": "Isometric hip adduction",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["gracilis", "knee stretch", "medial thigh"]
+    },
+    {
+    "id": "knee_20_gracilis_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Gracilis",
+    "stem": "Which exercise strengthens the gracilis?",
+    "choices": [
+    {
+    "text": "Resisted knee flexion or hip adduction",
+    "isCorrect": true,
+    "explain": "Gracilis assists knee flexion and hip adduction."
+    },
+    {
+    "text": "Passive hip abduction stretch",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip extension exercise",
+    "isCorrect": false,
+    "explain": "Hip extension is not an action of gracilis."
+    },
+    {
+    "text": "Ankle dorsiflexion",
+    "isCorrect": false,
+    "explain": "Ankle dorsiflexion does not involve gracilis."
+    }
+    ],
+    "tags": ["gracilis", "knee flexion", "strength"]
+    },
+    {
+    "id": "knee_21_popliteus_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Popliteus",
+    "stem": "Which movement best stretches the popliteus muscle?",
+    "choices": [
+    {
+    "text": "Knee extension with gentle tibial external rotation",
+    "isCorrect": true,
+    "explain": "Popliteus internally rotates the tibia to unlock the knee; the opposite movement stretches it."
+    },
+    {
+    "text": "Knee flexion with tibial internal rotation",
+    "isCorrect": false,
+    "explain": "This reproduces popliteus action."
+    },
+    {
+    "text": "Hip flexion with knee extended",
+    "isCorrect": false,
+    "explain": "Hip position does not affect popliteus length."
+    },
+    {
+    "text": "Isometric knee flexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["popliteus", "knee rotation", "stretch"]
+    },
+    {
+    "id": "knee_22_popliteus_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Popliteus",
+    "stem": "Which exercise strengthens the popliteus?",
+    "choices": [
+    {
+    "text": "Resisted tibial internal rotation in slight knee flexion",
+    "isCorrect": true,
+    "explain": "Popliteus internally rotates the tibia during knee flexion."
+    },
+    {
+    "text": "Passive knee extension stretch",
+    "isCorrect": false,
+    "explain": "Passive stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip extension exercise",
+    "isCorrect": false,
+    "explain": "Hip extension does not involve popliteus."
+    },
+    {
+    "text": "Ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "Plantarflexion does not involve popliteus."
+    }
+    ],
+    "tags": ["popliteus", "knee stability", "strength"]
+    },
+    {
+    "id": "knee_23_gastroc_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Gastrocnemius",
+    "stem": "Which position best stretches the gastrocnemius?",
+    "choices": [
+    {
+    "text": "Ankle dorsiflexion with the knee extended",
+    "isCorrect": true,
+    "explain": "Gastrocnemius crosses the knee and ankle; dorsiflexion with knee extension lengthens it maximally."
+    },
+    {
+    "text": "Ankle dorsiflexion with knee flexed",
+    "isCorrect": false,
+    "explain": "Knee flexion shortens gastrocnemius."
+    },
+    {
+    "text": "Ankle plantarflexion with knee extended",
+    "isCorrect": false,
+    "explain": "Plantarflexion shortens gastrocnemius."
+    },
+    {
+    "text": "Isometric plantarflexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["gastrocnemius", "calf", "knee stretch"]
+    },
+    {
+    "id": "knee_24_gastroc_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Gastrocnemius",
+    "stem": "Which exercise best strengthens the gastrocnemius?",
+    "choices": [
+    {
+    "text": "Heel raises performed with knees extended",
+    "isCorrect": true,
+    "explain": "Knee extension biases gastrocnemius during plantarflexion."
+    },
+    {
+    "text": "Heel raises with knees flexed",
+    "isCorrect": false,
+    "explain": "This emphasizes soleus rather than gastrocnemius."
+    },
+    {
+    "text": "Passive calf stretching",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Ankle dorsiflexion",
+    "isCorrect": false,
+    "explain": "Dorsiflexion activates anterior leg muscles."
+    }
+    ],
+    "tags": ["gastrocnemius", "plantarflexion", "strength"]
+    },
+    {
+    "id": "knee_25_soleus_stretch",
+    "bank": "RemEx",
+    "bucket": "Ankle & feet Stretches",
+    "region": "Ankle",
+    "type": "stretch",
+    "topic": "Soleus",
+    "stem": "Which position best stretches the soleus?",
+    "choices": [
+    {
+    "text": "Ankle dorsiflexion with the knee flexed",
+    "isCorrect": true,
+    "explain": "Soleus does not cross the knee and is best stretched with knee flexion and ankle dorsiflexion."
+    },
+    {
+    "text": "Ankle dorsiflexion with knee extended",
+    "isCorrect": false,
+    "explain": "This biases gastrocnemius rather than soleus."
+    },
+    {
+    "text": "Ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "Plantarflexion shortens soleus."
+    },
+    {
+    "text": "Isometric plantarflexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["soleus", "calf", "stretch"]
+    },
+    {
+    "id": "knee_26_soleus_strength",
+    "bank": "RemEx",
+    "bucket": "Ankle & feet Stretches",
+    "region": "Ankle",
+    "type": "strength",
+    "topic": "Soleus",
+    "stem": "Which exercise best strengthens the soleus?",
+    "choices": [
+    {
+    "text": "Heel raises performed with knees flexed",
+    "isCorrect": true,
+    "explain": "Knee flexion reduces gastrocnemius contribution, emphasizing soleus."
+    },
+    {
+    "text": "Heel raises with knees extended",
+    "isCorrect": false,
+    "explain": "This emphasizes gastrocnemius."
+    },
+    {
+    "text": "Passive calf stretching",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Ankle dorsiflexion exercises",
+    "isCorrect": false,
+    "explain": "Dorsiflexion recruits anterior leg muscles."
+    }
+    ],
+    "tags": ["soleus", "plantarflexion", "strength"]
+    },
+    {
+    "id": "knee_27_plantaris_stretch",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "stretch",
+    "topic": "Plantaris",
+    "stem": "Which position best stretches the plantaris muscle?",
+    "choices": [
+    {
+    "text": "Knee extension combined with ankle dorsiflexion",
+    "isCorrect": true,
+    "explain": "Plantaris assists knee flexion and plantarflexion; knee extension and dorsiflexion lengthen it."
+    },
+    {
+    "text": "Knee flexion with ankle plantarflexion",
+    "isCorrect": false,
+    "explain": "This shortens the plantaris."
+    },
+    {
+    "text": "Hip flexion with knee extended",
+    "isCorrect": false,
+    "explain": "Hip position has minimal effect on plantaris length."
+    },
+    {
+    "text": "Isometric plantarflexion",
+    "isCorrect": false,
+    "explain": "Isometric contraction does not stretch muscle."
+    }
+    ],
+    "tags": ["plantaris", "calf", "stretch"]
+    },
+    {
+    "id": "knee_28_plantaris_strength",
+    "bank": "RemEx",
+    "bucket": "Knee Stretches",
+    "region": "Knee",
+    "type": "strength",
+    "topic": "Plantaris",
+    "stem": "Which exercise strengthens the plantaris?",
+    "choices": [
+    {
+    "text": "Assisted heel raises",
+    "isCorrect": true,
+    "explain": "Plantaris assists plantarflexion and is activated during heel raises."
+    },
+    {
+    "text": "Passive ankle dorsiflexion stretch",
+    "isCorrect": false,
+    "explain": "Stretching does not strengthen muscle."
+    },
+    {
+    "text": "Hip extension exercise",
+    "isCorrect": false,
+    "explain": "Hip extension does not involve plantaris."
+    },
+    {
+    "text": "Isometric knee extension",
+    "isCorrect": false,
+    "explain": "Knee extension does not recruit plantaris."
+    }
+    ],
+    "tags": ["plantaris", "plantarflexion", "strength"]
+    },
+    {
+    "id": "head_01_occipitofrontalis_frontalis_stretch",
+    "bank": "RemEx",
+    "bucket": "Cervical Stretching",
+    "region": "Cervical",
+    "type": "stretch",
+    "topic": "Occipitofrontalis (frontal belly)",
+    "stem": "Which method most effectively stretches the frontal belly of the occipitofrontalis?",
+    "choices": [
+    {
+    "text": "Manually depressing the eyebrow/forehead tissues inferiorly while keeping the brows relaxed (no active eyebrow elevation)",
+    "isCorrect": true,
+    "explain": "The frontal belly elevates the eyebrows and wrinkles the forehead; a stretch is achieved by keeping the muscle relaxed while passively drawing the brow/forehead tissues downward to lengthen it."
+    },
+    {
+    "text": "Actively raising the eyebrows repeatedly through full range",
+    "isCorrect": false,
+    "explain": "Active eyebrow elevation is the primary action of the frontal belly and shortens the muscle rather than lengthening it."
+    },
+    {
+    "text": "Clenching the teeth firmly while keeping the mouth closed",
+    "isCorrect": false,
+    "explain": "Jaw clenching primarily recruits masticatory muscles (e.g., masseter/temporalis) and does not lengthen the frontal belly."
+    },
+    {
+    "text": "Retracting the mandible while maintaining a neutral facial expression",
+    "isCorrect": false,
+    "explain": "Mandibular retrusion involves jaw musculature and does not create a passive lengthening force across the frontal belly."
+    }
+    ],
+    "tags": ["occipitofrontalis", "frontalis", "eyebrow elevation"]
+    },
+        {
+        "id": "head_02_occipitofrontalis_frontalis_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Occipitofrontalis (frontal belly)",
+        "stem": "Which exercise best targets isometric strengthening of the frontal belly of the occipitofrontalis?",
+        "choices": [
+        {
+        "text": "Place fingers just above the eyebrows and attempt to raise the eyebrows against the unmoving fingers",
+        "isCorrect": true,
+        "explain": "The frontal belly elevates the eyebrows; resisting eyebrow elevation without visible movement produces an isometric contraction of the target muscle."
+        },
+        {
+        "text": "Open the jaw as wide as comfortable and hold",
+        "isCorrect": false,
+        "explain": "Jaw opening primarily involves mandibular depressors and does not directly load eyebrow elevation."
+        },
+        {
+        "text": "Press the tongue firmly into the roof of the mouth",
+        "isCorrect": false,
+        "explain": "Tongue-palate pressure biases suprahyoid and tongue musculature, not the frontal belly."
+        },
+        {
+        "text": "Perform cervical side-bending against the hand",
+        "isCorrect": false,
+        "explain": "Cervical side-bending strengthens neck muscles (e.g., SCM/scalenes) rather than the frontal belly."
+        }
+        ],
+        "tags": ["frontalis", "isometric", "eyebrows"]
+        },
+        {
+        "id": "tmj_01_temporalis_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Temporalis",
+        "stem": "Which positioning most effectively stretches the temporalis?",
+        "choices": [
+        {
+        "text": "Gentle mandibular depression (mouth opening), optionally combined with slight contralateral lateral deviation",
+        "isCorrect": true,
+        "explain": "Temporalis elevates the mandible (and assists retrusion); opening the jaw lengthens it, and contralateral deviation can bias stretch across one side."
+        },
+        {
+        "text": "Maximal jaw clenching with the teeth together",
+        "isCorrect": false,
+        "explain": "Clenching is strong mandibular elevation, which shortens temporalis and is a strengthening action, not a stretch."
+        },
+        {
+        "text": "Mandibular retrusion with the mouth closed",
+        "isCorrect": false,
+        "explain": "Retrusion is an action assisted by temporalis; performing it actively does not lengthen the muscle."
+        },
+        {
+        "text": "Cervical flexion with the jaw relaxed",
+        "isCorrect": false,
+        "explain": "Cervical flexion primarily lengthens posterior cervical extensors and does not reliably lengthen temporalis."
+        }
+        ],
+        "tags": ["temporalis", "mandibular elevation", "jaw stretch"]
+        },
+        {
+        "id": "tmj_02_temporalis_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Temporalis",
+        "stem": "Which exercise best strengthens the temporalis through its primary action?",
+        "choices": [
+        {
+        "text": "Resisted mandibular elevation: attempt to close the jaw into an unmoving hand/fist placed under the chin (slight opening start)",
+        "isCorrect": true,
+        "explain": "Temporalis is a primary elevator of the mandible; resisting jaw closing loads the temporalis (and other jaw closers) in a strengthening manner."
+        },
+        {
+        "text": "Passive jaw opening held at end-range",
+        "isCorrect": false,
+        "explain": "Passive end-range opening lengthens jaw closers and does not provide a strengthening stimulus."
+        },
+        {
+        "text": "Resisted mandibular depression: attempt to open the jaw into resistance",
+        "isCorrect": false,
+        "explain": "Mandibular depression is the opposite of temporalis' primary role (elevation), so this does not specifically strengthen temporalis."
+        },
+        {
+        "text": "Isometric cervical extension into the hand",
+        "isCorrect": false,
+        "explain": "Cervical extension strengthens neck extensors rather than the temporalis."
+        }
+        ],
+        "tags": ["temporalis", "jaw closing", "strength"]
+        },
+        {
+        "id": "tmj_03_masseter_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Masseter",
+        "stem": "Which position most effectively stretches the masseter?",
+        "choices": [
+        {
+        "text": "Gentle mandibular depression (mouth opening) within comfort, optionally with very light downward overpressure under the chin",
+        "isCorrect": true,
+        "explain": "Masseter is a strong mandibular elevator; opening the jaw lengthens the muscle, and light overpressure can increase lengthening if pain-free."
+        },
+        {
+        "text": "Jaw clenching in maximal intercuspation (teeth together)",
+        "isCorrect": false,
+        "explain": "Clenching is masseter's primary action (elevation) and shortens it; this is strengthening, not stretching."
+        },
+        {
+        "text": "Mandibular protrusion held at end-range",
+        "isCorrect": false,
+        "explain": "Protrusion is not a lengthening position for masseter overall and does not reliably create a stretch compared with mandibular depression."
+        },
+        {
+        "text": "Cervical rotation to the opposite side",
+        "isCorrect": false,
+        "explain": "Cervical rotation primarily affects neck musculature and does not directly lengthen the masseter."
+        }
+        ],
+        "tags": ["masseter", "mandibular elevation", "TMJ stretch"]
+        },
+        {
+        "id": "tmj_04_masseter_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Masseter",
+        "stem": "Which exercise best strengthens the masseter?",
+        "choices": [
+        {
+        "text": "Resisted mandibular elevation: attempt to close the jaw into an unmoving fist/hand under the chin (no visible movement)",
+        "isCorrect": true,
+        "explain": "The masseter is a primary jaw closer; resisting mandibular elevation produces a strengthening contraction of the jaw elevators."
+        },
+        {
+        "text": "Passive mouth opening held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive holding in an open position lengthens jaw closers and does not provide a strengthening load."
+        },
+        {
+        "text": "Resisted jaw opening into the hand",
+        "isCorrect": false,
+        "explain": "Jaw opening recruits mandibular depressors rather than the masseter, which is an elevator."
+        },
+        {
+        "text": "Isometric tongue press to the palate",
+        "isCorrect": false,
+        "explain": "Tongue-palate pressure targets tongue and floor-of-mouth control, not the masseter's primary action."
+        }
+        ],
+        "tags": ["masseter", "jaw closing", "isometric"]
+        },
+        {
+        "id": "tmj_05_medial_pterygoid_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Medial pterygoid",
+        "stem": "Which movement best stretches the medial pterygoid on the left?",
+        "choices": [
+        {
+        "text": "Gentle mouth opening combined with mandibular deviation to the left (ipsilateral deviation)",
+        "isCorrect": true,
+        "explain": "Medial pterygoid assists elevation and contributes to contralateral excursion; positioning the jaw to lengthen a side can be biased by opening plus ipsilateral deviation to place that side under stretch."
+        },
+        {
+        "text": "Jaw clenching with the mandible held midline",
+        "isCorrect": false,
+        "explain": "Clenching is mandibular elevation, which shortens medial pterygoid rather than lengthening it."
+        },
+        {
+        "text": "Mandibular protrusion against resistance",
+        "isCorrect": false,
+        "explain": "Protrusion is assisted by medial pterygoid; performing it against resistance is a strengthening action, not a stretch."
+        },
+        {
+        "text": "Cervical side-bending to the right",
+        "isCorrect": false,
+        "explain": "Cervical side-bending primarily affects neck muscles and does not reliably lengthen medial pterygoid."
+        }
+        ],
+        "tags": ["medial pterygoid", "jaw deviation", "TMJ stretch"]
+        },
+        {
+        "id": "tmj_06_medial_pterygoid_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Medial pterygoid",
+        "stem": "Which exercise most directly strengthens the medial pterygoid?",
+        "choices": [
+        {
+        "text": "Resisted mandibular elevation (jaw closing) with the jaw maintained in midline alignment",
+        "isCorrect": true,
+        "explain": "Medial pterygoid assists mandibular elevation; resisted jaw closing loads it in a strengthening pattern alongside other elevators."
+        },
+        {
+        "text": "Passive mouth opening held at end-range",
+        "isCorrect": false,
+        "explain": "Passive opening lengthens jaw elevators and does not provide strengthening stimulus."
+        },
+        {
+        "text": "Resisted cervical flexion into the hand",
+        "isCorrect": false,
+        "explain": "Cervical flexion strengthens anterior neck musculature, not mandibular elevators."
+        },
+        {
+        "text": "Resisted jaw opening into the hand",
+        "isCorrect": false,
+        "explain": "Jaw opening recruits mandibular depressors; medial pterygoid is primarily an elevator."
+        }
+        ],
+        "tags": ["medial pterygoid", "mandibular elevation", "strength"]
+        },
+        {
+        "id": "tmj_07_lateral_pterygoid_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Lateral pterygoid",
+        "stem": "Which positioning most effectively lengthens (stretches) the lateral pterygoid?",
+        "choices": [
+        {
+        "text": "Mandibular retrusion back toward neutral (from a slightly protruded position) while keeping the jaw relaxed",
+        "isCorrect": true,
+        "explain": "Lateral pterygoid contributes to mandibular protrusion and assists opening; moving from protrusion back toward retrusion/neutral places it in a lengthened position."
+        },
+        {
+        "text": "Active mandibular protrusion held at end-range",
+        "isCorrect": false,
+        "explain": "Protrusion is a primary action of lateral pterygoid and shortens it, making this a strengthening/activation position rather than a stretch."
+        },
+        {
+        "text": "Jaw clenching with teeth together",
+        "isCorrect": false,
+        "explain": "Clenching primarily involves jaw elevators and does not lengthen the lateral pterygoid."
+        },
+        {
+        "text": "Cervical extension with the mouth closed",
+        "isCorrect": false,
+        "explain": "Cervical extension changes neck posture but does not reliably lengthen the lateral pterygoid."
+        }
+        ],
+        "tags": ["lateral pterygoid", "mandibular protrusion", "TMJ"]
+        },
+        {
+        "id": "tmj_08_lateral_pterygoid_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Lateral pterygoid",
+        "stem": "Which exercise best targets strengthening of the lateral pterygoid?",
+        "choices": [
+        {
+        "text": "Resisted mandibular protrusion: push the jaw forward against gentle resistance applied to the chin",
+        "isCorrect": true,
+        "explain": "Lateral pterygoid contributes strongly to mandibular protrusion; applying resistance to forward glide loads the muscle for strengthening."
+        },
+        {
+        "text": "Passive mouth opening held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive holding does not provide a strengthening stimulus and primarily lengthens jaw elevators."
+        },
+        {
+        "text": "Resisted jaw closing into the hand",
+        "isCorrect": false,
+        "explain": "Jaw closing targets mandibular elevators; lateral pterygoid is primarily associated with protrusion (and assisting opening), not elevation."
+        },
+        {
+        "text": "Isometric cervical rotation into the hand",
+        "isCorrect": false,
+        "explain": "Cervical rotation strengthens neck rotators and does not specifically strengthen the lateral pterygoid."
+        }
+        ],
+        "tags": ["lateral pterygoid", "protrusion", "strength"]
+        },
+        {
+        "id": "cerv_01_scm_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Sternocleidomastoid",
+        "stem": "Which positioning most effectively stretches the right sternocleidomastoid (SCM)?",
+        "choices": [
+        {
+        "text": "Left side-bending combined with right rotation and slight cervical extension (pain-free)",
+        "isCorrect": true,
+        "explain": "Right SCM contributes to ipsilateral side-bending and contralateral rotation; placing the neck into contralateral side-bending with ipsilateral rotation and extension lengthens the SCM."
+        },
+        {
+        "text": "Right side-bending with left rotation",
+        "isCorrect": false,
+        "explain": "This matches right SCM's unilateral action pattern (ipsilateral side-bend with contralateral rotation) and therefore shortens it."
+        },
+        {
+        "text": "Chin tuck with gentle cervical flexion",
+        "isCorrect": false,
+        "explain": "Chin tuck biases deep cervical flexors and does not selectively lengthen the SCM compared with contralateral side-bending and ipsilateral rotation."
+        },
+        {
+        "text": "Cervical extension with head rotated left",
+        "isCorrect": false,
+        "explain": "Left rotation is contralateral rotation for the right SCM and tends to recruit/shorten it rather than lengthen it when combined with extension."
+        }
+        ],
+        "tags": ["SCM", "neck stretch", "rotation"]
+        },
+        {
+        "id": "cerv_02_scm_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Sternocleidomastoid",
+        "stem": "Which exercise best strengthens the sternocleidomastoid through cervical flexion?",
+        "choices": [
+        {
+        "text": "Isometric cervical flexion: press the forehead into the hand without visible movement",
+        "isCorrect": true,
+        "explain": "Bilateral SCM contributes to cervical flexion; resisting flexion isometrically loads the SCM (and other flexors) for strengthening."
+        },
+        {
+        "text": "Passive cervical extension stretch held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive extension is a stretching position for anterior neck muscles and does not create a strengthening contraction."
+        },
+        {
+        "text": "Cervical side-bending away from the hand without resistance",
+        "isCorrect": false,
+        "explain": "Unresisted movement does not provide an adequate strengthening load and does not specifically target SCM's role in flexion."
+        },
+        {
+        "text": "Scapular depression holds with the neck relaxed",
+        "isCorrect": false,
+        "explain": "Scapular depression targets shoulder girdle depressors and does not strengthen SCM."
+        }
+        ],
+        "tags": ["SCM", "cervical flexion", "isometric"]
+        },
+        {
+        "id": "cerv_03_scalenes_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Scalenes (anterior, middle, posterior)",
+        "stem": "Which technique best stretches the right scalenes while minimizing substitution?",
+        "choices": [
+        {
+        "text": "Left side-bending with slight cervical extension while stabilizing the right first rib/clavicular area (pain-free)",
+        "isCorrect": true,
+        "explain": "Scalenes side-bend the neck ipsilaterally and elevate the upper ribs; contralateral side-bending with rib stabilization lengthens the scalenes more effectively."
+        },
+        {
+        "text": "Right side-bending with deep inhalation",
+        "isCorrect": false,
+        "explain": "Right side-bending shortens the right scalenes, and deep inhalation recruits them as accessory inspiratory muscles rather than stretching them."
+        },
+        {
+        "text": "Cervical flexion with chin tuck only",
+        "isCorrect": false,
+        "explain": "Chin tuck primarily biases deep cervical flexors; it does not specifically lengthen the scalenes as effectively as contralateral side-bending with rib stabilization."
+        },
+        {
+        "text": "Shoulder shrugs with the neck neutral",
+        "isCorrect": false,
+        "explain": "Shoulder shrugs target scapular elevators and do not place a lengthening bias on the scalenes."
+        }
+        ],
+        "tags": ["scalenes", "first rib", "neck stretch"]
+        },
+        {
+        "id": "cerv_04_scalenes_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Scalenes (anterior, middle, posterior)",
+        "stem": "Which exercise best strengthens the scalenes as cervical lateral flexors?",
+        "choices": [
+        {
+        "text": "Isometric cervical side-bending into the hand (no visible movement), performed on each side",
+        "isCorrect": true,
+        "explain": "Scalenes contribute to ipsilateral side-bending and stabilization; resisting side-bending isometrically loads them appropriately for strengthening."
+        },
+        {
+        "text": "Passive cervical side-bending stretch held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching lengthens tissue but does not produce a strengthening contraction."
+        },
+        {
+        "text": "Resisted shoulder abduction with the neck relaxed",
+        "isCorrect": false,
+        "explain": "Shoulder abduction targets deltoid and scapular rotators; it does not strengthen the scalenes' cervical action."
+        },
+        {
+        "text": "Jaw clenching against resistance",
+        "isCorrect": false,
+        "explain": "Jaw clenching strengthens masticatory muscles and does not strengthen cervical lateral flexors."
+        }
+        ],
+        "tags": ["scalenes", "side-bending", "isometric"]
+        },
+        {
+        "id": "cerv_05_platysma_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Platysma",
+        "stem": "Which position best stretches the platysma?",
+        "choices": [
+        {
+        "text": "Gentle cervical extension with the jaw relaxed and lips soft (no forceful end-range)",
+        "isCorrect": true,
+        "explain": "Platysma spans the superficial anterior neck and assists mandibular depression and lower lip depression; lengthening is biased by extending the cervical region with relaxed facial tension."
+        },
+        {
+        "text": "Forceful jaw opening with the chin tucked",
+        "isCorrect": false,
+        "explain": "Forceful jaw opening emphasizes mandibular depressors, and chin tuck does not lengthen the superficial anterior neck tissues as reliably as gentle extension."
+        },
+        {
+        "text": "Cervical flexion with shoulders elevated",
+        "isCorrect": false,
+        "explain": "Cervical flexion shortens anterior neck tissues and does not place platysma in a lengthened position."
+        },
+        {
+        "text": "Jaw clenching with teeth together",
+        "isCorrect": false,
+        "explain": "Clenching recruits jaw elevators and does not lengthen platysma."
+        }
+        ],
+        "tags": ["platysma", "anterior neck", "stretch"]
+        },
+        {
+        "id": "cerv_06_platysma_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Platysma",
+        "stem": "Which exercise best targets strengthening of the platysma?",
+        "choices": [
+        {
+        "text": "Actively depress the lower lip and corners of the mouth to tense the anterior neck (controlled, pain-free)",
+        "isCorrect": true,
+        "explain": "Platysma draws the lower lip/corners downward and tenses the skin of the anterior neck; performing this action actively loads the muscle for strengthening."
+        },
+        {
+        "text": "Resisted cervical extension into the hand",
+        "isCorrect": false,
+        "explain": "Cervical extension strengthens posterior neck extensors, not the superficial platysma."
+        },
+        {
+        "text": "Resisted jaw closing into a fist",
+        "isCorrect": false,
+        "explain": "Jaw closing strengthens mandibular elevators (masseter/temporalis) rather than platysma."
+        },
+        {
+        "text": "Passive cervical extension stretch held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive holding is stretching and does not produce a strengthening contraction."
+        }
+        ],
+        "tags": ["platysma", "lower lip depression", "strength"]
+        },
+        {
+        "id": "cerv_07_longus_colli_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Longus colli",
+        "stem": "Which movement most directly lengthens (stretches) the longus colli?",
+        "choices": [
+        {
+        "text": "Gentle cervical extension performed within a comfortable mid-range (no end-range jamming)",
+        "isCorrect": true,
+        "explain": "Longus colli is a deep cervical flexor and stabilizer; controlled cervical extension lengthens deep cervical flexors."
+        },
+        {
+        "text": "Chin tuck held isometrically in supine",
+        "isCorrect": false,
+        "explain": "A chin tuck is a primary activation/strengthening strategy for deep cervical flexors and does not lengthen them."
+        },
+        {
+        "text": "Cervical flexion with the chin moving toward the chest",
+        "isCorrect": false,
+        "explain": "Cervical flexion shortens the deep cervical flexors rather than lengthening them."
+        },
+        {
+        "text": "Shoulder shrugging with the head neutral",
+        "isCorrect": false,
+        "explain": "Shrugging targets scapular elevators and does not lengthen deep cervical flexors."
+        }
+        ],
+        "tags": ["longus colli", "deep neck flexors", "stretch"]
+        },
+        {
+        "id": "cerv_08_longus_colli_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Longus colli",
+        "stem": "Which exercise best isolates strengthening of the deep cervical flexors (including longus colli)?",
+        "choices": [
+        {
+        "text": "Supine chin tuck (cranio-cervical flexion) without lifting the head from the surface",
+        "isCorrect": true,
+        "explain": "A controlled chin tuck targets deep cervical flexors by minimizing superficial compensations and focusing on segmental control."
+        },
+        {
+        "text": "Full sit-up with hands behind the head",
+        "isCorrect": false,
+        "explain": "A sit-up heavily biases trunk flexors and often recruits superficial neck flexors; it does not isolate deep cervical flexors."
+        },
+        {
+        "text": "Cervical extension against the hand",
+        "isCorrect": false,
+        "explain": "Extension strengthens posterior neck extensors, which oppose longus colli's primary flexor role."
+        },
+        {
+        "text": "Jaw clenching against resistance",
+        "isCorrect": false,
+        "explain": "Clenching recruits masticatory muscles and does not strengthen deep cervical flexors."
+        }
+        ],
+        "tags": ["longus colli", "chin tuck", "deep cervical flexors"]
+        },
+        {
+        "id": "cerv_09_longus_capitis_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Longus capitis",
+        "stem": "Which movement most directly stretches the longus capitis?",
+        "choices": [
+        {
+        "text": "Gentle upper-cervical extension (chin slightly up) performed within comfort",
+        "isCorrect": true,
+        "explain": "Longus capitis contributes to cervical flexion (especially upper cervical control); gentle extension lengthens it."
+        },
+        {
+        "text": "Upper-cervical flexion (chin nod) held isometrically",
+        "isCorrect": false,
+        "explain": "A chin nod is a primary activation pattern for deep cervical flexors and would shorten rather than lengthen longus capitis."
+        },
+        {
+        "text": "Cervical flexion with chin-to-chest motion",
+        "isCorrect": false,
+        "explain": "Flexion shortens the deep cervical flexors rather than stretching them."
+        },
+        {
+        "text": "Scapular retraction holds",
+        "isCorrect": false,
+        "explain": "Scapular retraction targets shoulder girdle musculature and does not lengthen longus capitis."
+        }
+        ],
+        "tags": ["longus capitis", "upper cervical", "stretch"]
+        },
+        {
+        "id": "cerv_10_longus_capitis_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Longus capitis",
+        "stem": "Which exercise best strengthens longus capitis as a deep cervical flexor?",
+        "choices": [
+        {
+        "text": "Supine chin nod (cranio-cervical flexion) with minimal superficial neck activity",
+        "isCorrect": true,
+        "explain": "A chin nod emphasizes upper cervical flexor control, recruiting deep flexors such as longus capitis with reduced compensation."
+        },
+        {
+        "text": "Resisted cervical extension into the hand",
+        "isCorrect": false,
+        "explain": "Extension strengthens posterior extensors, which oppose longus capitis' flexor function."
+        },
+        {
+        "text": "Passive cervical extension stretch held 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching does not provide a strengthening contraction."
+        },
+        {
+        "text": "Jaw opening against resistance",
+        "isCorrect": false,
+        "explain": "Resisted jaw opening targets mandibular depressors and does not strengthen deep cervical flexors."
+        }
+        ],
+        "tags": ["longus capitis", "chin nod", "deep flexors"]
+        },
+        {
+        "id": "shoulder_01_upper_trapezius_stretch",
+        "bank": "RemEx",
+        "bucket": "Shoulder Stretches",
+        "region": "Shoulder",
+        "type": "stretch",
+        "topic": "Upper trapezius (cervical portion)",
+        "stem": "Which positioning most effectively stretches the right upper trapezius?",
+        "choices": [
+        {
+        "text": "Left cervical side-bending with the right shoulder gently depressed (pain-free)",
+        "isCorrect": true,
+        "explain": "Upper trapezius elevates the scapula and contributes to ipsilateral side-bending; contralateral side-bending combined with scapular depression lengthens it."
+        },
+        {
+        "text": "Right cervical side-bending with right shoulder elevation",
+        "isCorrect": false,
+        "explain": "Ipsilateral side-bending and shoulder elevation replicate upper trapezius actions and shorten the muscle."
+        },
+        {
+        "text": "Cervical extension with shoulder shrugging",
+        "isCorrect": false,
+        "explain": "Extension and shrugging recruit and shorten the upper trapezius rather than lengthening it."
+        },
+        {
+        "text": "Cervical rotation to the left with both shoulders relaxed, without side-bending",
+        "isCorrect": false,
+        "explain": "Rotation alone does not reliably lengthen upper trapezius as effectively as contralateral side-bending with scapular depression."
+        }
+        ],
+        "tags": ["upper trapezius", "neck stretch", "scapular elevation"]
+        },
+        {
+        "id": "shoulder_02_upper_trapezius_strength",
+        "bank": "RemEx",
+        "bucket": "Shoulder Stretches",
+        "region": "Shoulder",
+        "type": "strength",
+        "topic": "Upper trapezius (cervical portion)",
+        "stem": "Which exercise best strengthens the upper trapezius through scapular elevation?",
+        "choices": [
+        {
+        "text": "Controlled shoulder shrugs against resistance (e.g., dumbbells or band), elevating the scapulae",
+        "isCorrect": true,
+        "explain": "Upper trapezius is a primary scapular elevator; resisted scapular elevation is a direct strengthening action."
+        },
+        {
+        "text": "Passive upper trapezius stretch held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching lengthens tissues but does not provide a strengthening contraction."
+        },
+        {
+        "text": "Resisted scapular depression (pushing shoulders down) against a strap",
+        "isCorrect": false,
+        "explain": "Scapular depression strengthens scapular depressors and opposes upper trapezius' elevation role."
+        },
+        {
+        "text": "Jaw clenching into resistance",
+        "isCorrect": false,
+        "explain": "Jaw clenching strengthens masticatory muscles, not upper trapezius."
+        }
+        ],
+        "tags": ["upper trapezius", "shrug", "scapular elevation"]
+        },
+        {
+        "id": "shoulder_03_levator_scapulae_stretch",
+        "bank": "RemEx",
+        "bucket": "Shoulder Stretches",
+        "region": "Shoulder",
+        "type": "stretch",
+        "topic": "Levator scapulae",
+        "stem": "Which positioning best stretches the right levator scapulae?",
+        "choices": [
+        {
+        "text": "Cervical flexion with rotation to the left and slight left side-bending while depressing the right scapula",
+        "isCorrect": true,
+        "explain": "Levator scapulae elevates and downwardly rotates the scapula and contributes to ipsilateral cervical rotation/side-bending; flexion with contralateral rotation/side-bending plus scapular depression lengthens it."
+        },
+        {
+        "text": "Cervical extension with rotation to the right",
+        "isCorrect": false,
+        "explain": "Extension and ipsilateral rotation bias levator scapulae activation and shorten the muscle."
+        },
+        {
+        "text": "Right shoulder shrugging with the neck neutral",
+        "isCorrect": false,
+        "explain": "Shrugging is scapular elevation, a primary levator scapulae action, and therefore shortens it."
+        },
+        {
+        "text": "Cervical rotation to the right with the right shoulder elevated",
+        "isCorrect": false,
+        "explain": "Ipsilateral rotation and scapular elevation replicate levator scapulae functions and do not produce a stretch."
+        }
+        ],
+        "tags": ["levator scapulae", "neck stretch", "scapular elevation"]
+        },
+        {
+        "id": "shoulder_04_levator_scapulae_strength",
+        "bank": "RemEx",
+        "bucket": "Shoulder Stretches",
+        "region": "Shoulder",
+        "type": "strength",
+        "topic": "Levator scapulae",
+        "stem": "Which exercise best strengthens the levator scapulae?",
+        "choices": [
+        {
+        "text": "Resisted scapular elevation on the involved side (e.g., unilateral shrug against resistance)",
+        "isCorrect": true,
+        "explain": "Levator scapulae is a scapular elevator; resisted elevation (shrugging) strengthens it."
+        },
+        {
+        "text": "Passive levator scapulae stretch held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching does not produce a strengthening contraction."
+        },
+        {
+        "text": "Resisted scapular upward rotation (e.g., overhead press emphasis)",
+        "isCorrect": false,
+        "explain": "Upward rotation is primarily produced by upper/lower trapezius and serratus anterior, not levator scapulae (a downward rotator)."
+        },
+        {
+        "text": "Resisted jaw opening into the hand",
+        "isCorrect": false,
+        "explain": "Jaw opening targets mandibular depressors and does not strengthen levator scapulae."
+        }
+        ],
+        "tags": ["levator scapulae", "shrug", "scapula"]
+        },
+        {
+        "id": "cerv_11_splenius_capitis_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Splenius capitis",
+        "stem": "Which positioning most effectively stretches the right splenius capitis?",
+        "choices": [
+        {
+        "text": "Cervical flexion combined with left rotation and slight left side-bending",
+        "isCorrect": true,
+        "explain": "Splenius capitis extends the neck and rotates/side-bends ipsilaterally; flexion with contralateral rotation/side-bending lengthens it."
+        },
+        {
+        "text": "Cervical extension with right rotation",
+        "isCorrect": false,
+        "explain": "Extension and ipsilateral rotation are primary actions of the splenius capitis and shorten it."
+        },
+        {
+        "text": "Chin nod (upper cervical flexion) only",
+        "isCorrect": false,
+        "explain": "A chin nod primarily targets upper cervical segments and is more specific to suboccipital control than lengthening splenius capitis."
+        },
+        {
+        "text": "Right side-bending with neutral rotation",
+        "isCorrect": false,
+        "explain": "Ipsilateral side-bending shortens the right splenius capitis rather than stretching it."
+        }
+        ],
+        "tags": ["splenius capitis", "posterior neck", "stretch"]
+        },
+        {
+        "id": "cerv_12_splenius_capitis_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Splenius capitis",
+        "stem": "Which exercise best strengthens the splenius capitis through its unilateral action?",
+        "choices": [
+        {
+        "text": "Isometric cervical extension with ipsilateral rotation into an unmoving hand placed on the back-lateral head",
+        "isCorrect": true,
+        "explain": "Splenius capitis produces cervical extension and ipsilateral rotation; resisting this combined action loads the muscle for strengthening."
+        },
+        {
+        "text": "Passive cervical flexion stretch held for 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching lengthens posterior tissues and does not provide strengthening stimulus."
+        },
+        {
+        "text": "Isometric cervical flexion into the hand",
+        "isCorrect": false,
+        "explain": "Cervical flexion strengthens anterior neck flexors and opposes splenius capitis' extensor role."
+        },
+        {
+        "text": "Jaw clenching against resistance",
+        "isCorrect": false,
+        "explain": "Jaw clenching strengthens masticatory muscles and does not strengthen splenius capitis."
+        }
+        ],
+        "tags": ["splenius capitis", "extension", "rotation"]
+        },
+        {
+        "id": "cerv_13_splenius_cervicis_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Splenius cervicis",
+        "stem": "Which position best stretches the left splenius cervicis?",
+        "choices": [
+        {
+        "text": "Cervical flexion with right rotation and slight right side-bending",
+        "isCorrect": true,
+        "explain": "Splenius cervicis extends and rotates/side-bends ipsilaterally; flexion with contralateral rotation/side-bending lengthens it."
+        },
+        {
+        "text": "Cervical extension with left rotation",
+        "isCorrect": false,
+        "explain": "Extension and ipsilateral rotation replicate splenius cervicis actions and shorten it."
+        },
+        {
+        "text": "Left side-bending with neutral rotation",
+        "isCorrect": false,
+        "explain": "Ipsilateral side-bending shortens the left splenius cervicis rather than stretching it."
+        },
+        {
+        "text": "Upper-cervical chin nod only",
+        "isCorrect": false,
+        "explain": "A chin nod primarily biases upper cervical flexion and is not the most effective global stretch for splenius cervicis."
+        }
+        ],
+        "tags": ["splenius cervicis", "posterior neck", "stretch"]
+        },
+        {
+        "id": "cerv_14_splenius_cervicis_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Splenius cervicis",
+        "stem": "Which exercise best strengthens the splenius cervicis?",
+        "choices": [
+        {
+        "text": "Isometric cervical extension into the hand with an added ipsilateral rotation intent (no visible motion)",
+        "isCorrect": true,
+        "explain": "Splenius cervicis contributes to extension and ipsilateral rotation; resisting these actions loads it for strengthening."
+        },
+        {
+        "text": "Passive cervical flexion stretch held 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive holding is stretching and does not strengthen posterior cervical muscles."
+        },
+        {
+        "text": "Isometric cervical flexion into the hand",
+        "isCorrect": false,
+        "explain": "Flexion strengthens anterior neck muscles and opposes splenius cervicis' extensor function."
+        },
+        {
+        "text": "Resisted shoulder abduction with the head neutral",
+        "isCorrect": false,
+        "explain": "Shoulder abduction targets glenohumeral musculature and does not strengthen splenius cervicis."
+        }
+        ],
+        "tags": ["splenius cervicis", "extension", "isometric"]
+        },
+        {
+        "id": "cerv_15_suboccipitals_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Suboccipitals",
+        "stem": "Which movement best stretches the suboccipital muscles?",
+        "choices": [
+        {
+        "text": "Gentle upper-cervical flexion (small chin nod as if saying \\\"yes\\\" slightly), without mid-lower cervical flexion",
+        "isCorrect": true,
+        "explain": "Suboccipitals primarily produce fine upper-cervical extension; a controlled chin nod places the upper cervical spine into flexion, lengthening them."
+        },
+        {
+        "text": "Full cervical extension (looking up) to end-range",
+        "isCorrect": false,
+        "explain": "Extension shortens suboccipitals and is the opposite of a stretch for these muscles."
+        },
+        {
+        "text": "Cervical side-bending to end-range",
+        "isCorrect": false,
+        "explain": "Side-bending does not specifically bias suboccipital lengthening as effectively as upper-cervical flexion."
+        },
+        {
+        "text": "Jaw opening held at end-range",
+        "isCorrect": false,
+        "explain": "Jaw opening targets mandibular mechanics and does not directly lengthen suboccipital muscles."
+        }
+        ],
+        "tags": ["suboccipitals", "chin nod", "upper cervical"]
+        },
+        {
+        "id": "cerv_16_suboccipitals_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Suboccipitals",
+        "stem": "Which exercise best targets isometric strengthening of the suboccipitals without excessive lower-cervical substitution?",
+        "choices": [
+        {
+        "text": "Apply light resistance at the occiput and perform a tiny upper-cervical extension effort without gross neck movement",
+        "isCorrect": true,
+        "explain": "Suboccipitals control fine upper-cervical extension; a small isometric extension effort against light resistance targets them while minimizing global cervical extensor dominance."
+        },
+        {
+        "text": "Resisted cervical flexion into the hand",
+        "isCorrect": false,
+        "explain": "Cervical flexion strengthens anterior neck flexors, not suboccipital extensors."
+        },
+        {
+        "text": "Full-range cervical extension repetitions against resistance",
+        "isCorrect": false,
+        "explain": "Large-range extension heavily recruits global cervical extensors and does not specifically isolate suboccipital control."
+        },
+        {
+        "text": "Passive chin nod stretch held 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching does not produce a strengthening contraction."
+        }
+        ],
+        "tags": ["suboccipitals", "isometric", "upper cervical extension"]
+        },
+        {
+        "id": "cerv_17_rectus_capitis_posterior_major_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Rectus capitis posterior major",
+        "stem": "Which movement best stretches the rectus capitis posterior major?",
+        "choices": [
+        {
+        "text": "Gentle upper-cervical flexion (small chin nod), keeping the mid-lower cervical spine relatively neutral",
+        "isCorrect": true,
+        "explain": "Rectus capitis posterior major is an upper-cervical extensor and rotator; upper-cervical flexion lengthens it most directly."
+        },
+        {
+        "text": "Upper-cervical extension (looking slightly up)",
+        "isCorrect": false,
+        "explain": "Extension is the primary action of rectus capitis posterior major and shortens it."
+        },
+        {
+        "text": "Cervical flexion to chin-on-chest with thoracic flexion",
+        "isCorrect": false,
+        "explain": "Global flexion may lengthen posterior tissues broadly but is less specific to the upper-cervical segmental target than a controlled chin nod."
+        },
+        {
+        "text": "Mandibular protrusion held at end-range",
+        "isCorrect": false,
+        "explain": "Mandibular protrusion is a jaw movement and does not directly lengthen this upper-cervical muscle."
+        }
+        ],
+        "tags": ["rectus capitis posterior major", "suboccipital", "stretch"]
+        },
+        {
+        "id": "cerv_18_rectus_capitis_posterior_major_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Rectus capitis posterior major",
+        "stem": "Which exercise best strengthens the rectus capitis posterior major in a controlled manner?",
+        "choices": [
+        {
+        "text": "Isometric tiny upper-cervical extension into light resistance applied at the occiput",
+        "isCorrect": true,
+        "explain": "This muscle contributes to upper-cervical extension; a small isometric extension effort targets it while limiting global extensor substitution."
+        },
+        {
+        "text": "Isometric chin tuck (upper-cervical flexion) against resistance",
+        "isCorrect": false,
+        "explain": "A chin tuck is upper-cervical flexion and would oppose and lengthen posterior upper-cervical extensors rather than strengthen them."
+        },
+        {
+        "text": "Passive upper-cervical flexion stretch held 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching does not create a strengthening contraction."
+        },
+        {
+        "text": "Resisted jaw closing into the hand",
+        "isCorrect": false,
+        "explain": "Jaw closing strengthens mandibular elevators and does not strengthen upper-cervical extensors."
+        }
+        ],
+        "tags": ["rectus capitis posterior major", "isometric", "upper cervical"]
+        },
+        {
+        "id": "cerv_19_rectus_capitis_posterior_minor_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Rectus capitis posterior minor",
+        "stem": "Which movement best stretches the rectus capitis posterior minor?",
+        "choices": [
+        {
+        "text": "Gentle upper-cervical flexion (small chin nod) performed slowly and within comfort",
+        "isCorrect": true,
+        "explain": "Rectus capitis posterior minor is a small upper-cervical extensor; upper-cervical flexion lengthens it."
+        },
+        {
+        "text": "Upper-cervical extension with the chin lifted",
+        "isCorrect": false,
+        "explain": "Extension is the muscle's primary action and therefore shortens it."
+        },
+        {
+        "text": "Cervical side-bending to end-range",
+        "isCorrect": false,
+        "explain": "Side-bending is not the primary lengthening direction for this upper-cervical extensor."
+        },
+        {
+        "text": "Mandibular depression (mouth opening) held",
+        "isCorrect": false,
+        "explain": "Jaw opening is not a cervical segmental stretch for rectus capitis posterior minor."
+        }
+        ],
+        "tags": ["rectus capitis posterior minor", "upper cervical", "stretch"]
+        },
+        {
+        "id": "cerv_20_rectus_capitis_posterior_minor_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Rectus capitis posterior minor",
+        "stem": "Which exercise best strengthens the rectus capitis posterior minor while minimizing global neck extensor dominance?",
+        "choices": [
+        {
+        "text": "Isometric tiny upper-cervical extension into light occipital resistance (no visible motion)",
+        "isCorrect": true,
+        "explain": "This muscle contributes to fine upper-cervical extension; a small isometric effort best targets the intended segmental action."
+        },
+        {
+        "text": "Resisted cervical flexion into the hand",
+        "isCorrect": false,
+        "explain": "Cervical flexion strengthens anterior flexors and does not strengthen posterior upper-cervical extensors."
+        },
+        {
+        "text": "Passive chin nod stretch held 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching does not provide a strengthening contraction."
+        },
+        {
+        "text": "Full-range resisted cervical extension repetitions",
+        "isCorrect": false,
+        "explain": "Large-range extension predominantly trains global extensors rather than targeting fine upper-cervical control."
+        }
+        ],
+        "tags": ["rectus capitis posterior minor", "isometric", "suboccipital"]
+        },
+        {
+        "id": "cerv_21_obliquus_capitis_superior_stretch",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "stretch",
+        "topic": "Obliquus capitis superior",
+        "stem": "Which movement best stretches the obliquus capitis superior?",
+        "choices": [
+        {
+        "text": "Gentle upper-cervical flexion (chin nod) performed slowly and within comfort",
+        "isCorrect": true,
+        "explain": "Obliquus capitis superior contributes to upper-cervical extension and stabilization; upper-cervical flexion lengthens it."
+        },
+        {
+        "text": "Upper-cervical extension (chin up) held",
+        "isCorrect": false,
+        "explain": "Extension shortens this upper-cervical extensor rather than stretching it."
+        },
+        {
+        "text": "Mandibular retrusion held",
+        "isCorrect": false,
+        "explain": "Mandibular retrusion is a jaw movement and does not lengthen an upper-cervical muscle."
+        },
+        {
+        "text": "Thoracic extension over a chair back",
+        "isCorrect": false,
+        "explain": "Thoracic extension affects thoracic spine mechanics and does not specifically lengthen upper-cervical suboccipital muscles."
+        }
+        ],
+        "tags": ["obliquus capitis superior", "upper cervical", "stretch"]
+        },
+        {
+        "id": "cerv_22_obliquus_capitis_superior_strength",
+        "bank": "RemEx",
+        "bucket": "Cervical Stretching",
+        "region": "Cervical",
+        "type": "strength",
+        "topic": "Obliquus capitis superior",
+        "stem": "Which exercise most directly strengthens the obliquus capitis superior?",
+        "choices": [
+        {
+        "text": "Isometric tiny upper-cervical extension effort into light resistance at the occiput",
+        "isCorrect": true,
+        "explain": "Obliquus capitis superior contributes to upper-cervical extension; a small isometric extension effort loads it appropriately."
+        },
+        {
+        "text": "Isometric chin tuck into resistance",
+        "isCorrect": false,
+        "explain": "A chin tuck is upper-cervical flexion and would oppose and lengthen the obliquus capitis superior rather than strengthen it."
+        },
+        {
+        "text": "Passive upper-cervical flexion stretch held 30 seconds",
+        "isCorrect": false,
+        "explain": "Passive stretching does not provide strengthening stimulus."
+        },
+        {
+        "text": "Resisted jaw closing into a fist",
+        "isCorrect": false,
+        "explain": "Jaw closing targets mandibular elevators, not upper-cervical musculature."
+        }
+        ],
+        "tags": ["obliquus capitis superior", "isometric", "suboccipital"]
+        },
+        {
+  "id": "cerv_23_obliquus_capitis_inferior_stretch",
+  "bank": "RemEx",
+  "bucket": "Cervical Stretching",
+  "region": "Cervical",
+  "type": "stretch",
+  "topic": "Obliquus capitis inferior",
+  "stem": "Which positioning best stretches the right obliquus capitis inferior?",
+  "choices": [
+    {
+      "text": "Upper-cervical flexion (chin nod) combined with gentle left rotation (pain-free)",
+      "isCorrect": true,
+      "explain": "Obliquus capitis inferior contributes to ipsilateral rotation and upper-cervical extension; placing the upper cervical spine into flexion and rotating contralaterally (left rotation for the right side) lengthens the muscle."
+    },
+    {
+      "text": "Upper-cervical extension (chin slightly up) combined with right rotation",
+      "isCorrect": false,
+      "explain": "Extension and ipsilateral rotation match the muscle's primary actions and therefore shorten the right obliquus capitis inferior."
+    },
+    {
+      "text": "Cervical flexion to chin-on-chest without controlling upper-cervical motion",
+      "isCorrect": false,
+      "explain": "Global cervical flexion without segmental control does not specifically bias upper-cervical rotation/flexion needed to lengthen the obliquus capitis inferior."
+    },
+    {
+      "text": "Mandibular protrusion held at end-range",
+      "isCorrect": false,
+      "explain": "Mandibular protrusion is a jaw motion and does not directly lengthen an upper-cervical rotator such as the obliquus capitis inferior."
+    }
+  ],
+  "tags": ["obliquus capitis inferior", "upper cervical", "rotation"]
+}]

@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RMT Exam Quiz Bank</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { overflow-x: hidden; }
+
+    :root {
+      --black-primary: #0f0f0f;
+      --black-secondary: #1a1a1a;
+      --black-light: #2a2a2a;
+
+      --gold-primary: #d4af37;
+      --gold-secondary: #c9a961;
+      --gold-light: #e5c76b;
+
+      --white: #ffffff;
+      --gray-medium: #b0b0b0;
+
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--black-primary) 0%, var(--black-secondary) 55%, #1a1410 100%);
+      min-height: 100vh;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 20% 40%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 80% 45%, rgba(212, 175, 55, 0.07) 0%, transparent 55%),
+        linear-gradient(rgba(212,175,55,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,0.03) 1px, transparent 1px);
+      background-size: auto, auto, 56px 56px, 56px 56px;
+      opacity: 0.9;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 22px 16px 50px;
+    }
+
+    /* ===== Topbar ===== */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      margin: 10px 0 14px;
+      padding: 14px 14px 12px;
+      border-radius: 18px;
+      background: rgba(15, 15, 15, 0.78);
+      border: 1px solid rgba(212,175,55,0.16);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand-left {
+      display: grid;
+      gap: 4px;
+      min-width: 260px;
+    }
+
+    .logo {
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+      box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+    }
+
+    .subtitle {
+      color: rgba(255,255,255,0.72);
+      font-size: 13px;
+    }
+
+    .right-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    select, button {
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.22);
+      background: rgba(15,15,15,0.65);
+      color: rgba(255,255,255,0.92);
+      padding: 10px 14px;
+      transition: var(--transition);
+      outline: none;
+    }
+
+    select { min-width: 240px; }
+    select:focus, button:focus {
+      box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+      border-color: rgba(212,175,55,0.55);
+    }
+
+    button { cursor: pointer; font-weight: 850; }
+    button:hover { transform: translateY(-1px); border-color: rgba(212,175,55,0.45); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+      color: var(--black-primary);
+      border-color: rgba(0,0,0,0.35);
+      box-shadow: 0 12px 30px rgba(212,175,55,0.25);
+    }
+    .btn-primary:hover { box-shadow: 0 16px 42px rgba(212,175,55,0.38); filter: brightness(1.04); }
+    .btn-ghost { background: transparent; color: var(--gold-light); }
+    .btn-ghost:hover { background: rgba(212,175,55,0.08); }
+
+    /* ===== Progress bar under topbar ===== */
+    .progress-wrap {
+      margin-top: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.14);
+      background: rgba(0,0,0,0.28);
+      overflow: hidden;
+      height: 10px;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold-primary), var(--gold-secondary));
+      box-shadow: 0 10px 30px rgba(212,175,55,0.22);
+      transition: width 260ms ease;
+    }
+
+    /* ===== Status line ===== */
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      color: rgba(255,255,255,0.74);
+      font-size: 13px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(26,26,26,0.55);
+      border: 1px solid rgba(212,175,55,0.16);
+      font-size: 12px;
+      color: rgba(255,255,255,0.86);
+    }
+    .pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      border-radius: 20px;
+      padding: 22px 18px;
+      background: linear-gradient(135deg, rgba(26,26,26,0.72), rgba(42,42,42,0.55));
+      border: 1px solid rgba(212,175,55,0.16);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+      overflow: hidden;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -120px -80px auto auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(212,175,55,0.18), transparent 60%);
+      pointer-events: none;
+      filter: blur(0px);
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 3.1vw, 34px);
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      line-height: 1.6;
+      max-width: 72ch;
+      font-size: 14px;
+    }
+
+    .statbar {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      border-radius: 16px;
+      border: 1px solid rgba(212,175,55,0.14);
+      background: rgba(15,15,15,0.50);
+      padding: 12px 12px;
+    }
+
+    .stat .label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 6px;
+    }
+    .stat .value {
+      font-weight: 950;
+      letter-spacing: -0.02em;
+      font-size: 16px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    /* ===== Main card ===== */
+    .card {
+      border-radius: 20px;
+      padding: 18px;
+      background: linear-gradient(135deg, rgba(26,26,26,0.72), rgba(42,42,42,0.55));
+      border: 1px solid rgba(212,175,55,0.16);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+    }
+
+    /* ===== Question ===== */
+    .qhead {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .topicLabel {
+      color: var(--gold-light);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+    .stem {
+      font-size: clamp(18px, 2.3vw, 22px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      margin: 10px 0 14px;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .options { display: grid; gap: 10px; }
+
+    .opt {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(212,175,55,0.14);
+      background: rgba(15,15,15,0.55);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .opt:hover {
+      border-color: rgba(212,175,55,0.35);
+      background: rgba(26,26,26,0.55);
+      transform: translateY(-1px);
+    }
+    .opt input {
+      margin-top: 3px;
+      transform: scale(1.18);
+      accent-color: var(--gold-primary);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .opt .letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: rgba(212,175,55,0.12);
+      border: 1px solid rgba(212,175,55,0.20);
+      color: rgba(255,255,255,0.92);
+      font-weight: 950;
+      flex-shrink: 0;
+    }
+    .opt .text {
+      color: rgba(255,255,255,0.86);
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .opt.ok { background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.35); }
+    .opt.bad { background: rgba(239,68,68,0.10); border-color: rgba(239,68,68,0.35); }
+
+    /* ===== Feedback ===== */
+    .feedback {
+      margin-top: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(212,175,55,0.14);
+      background: rgba(15,15,15,0.50);
+      padding: 14px;
+    }
+
+    .feedbackTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.3px;
+      border: 1px solid rgba(212,175,55,0.20);
+      background: rgba(26,26,26,0.45);
+    }
+    .badge.ok { border-color: rgba(16,185,129,0.45); background: rgba(16,185,129,0.10); }
+    .badge.bad { border-color: rgba(239,68,68,0.45); background: rgba(239,68,68,0.10); }
+
+    .explainTitle { color: var(--gold-light); font-weight: 950; margin-top: 10px; }
+    .explainText { color: rgba(255,255,255,0.80); line-height: 1.65; margin-top: 6px; }
+
+    /* ===== Review screen ===== */
+    .review {
+      margin-top: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .review-card {
+      border-radius: 18px;
+      border: 1px solid rgba(212,175,55,0.14);
+      background: rgba(15,15,15,0.50);
+      padding: 14px;
+    }
+
+    .review-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .review-qtitle {
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .kv {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.5;
+    }
+
+    .kv strong { color: rgba(255,255,255,0.92); }
+
+    .small {
+      font-size: 12px;
+      color: rgba(255,255,255,0.68);
+    }
+
+    .hint {
+      margin-top: 14px;
+      color: rgba(255,255,255,0.65);
+      font-size: 12px;
+      text-align: center;
+    }
+    .hint code {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(212,175,55,0.18);
+      padding: 2px 6px;
+      border-radius: 8px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    @media (max-width: 840px) {
+      select { min-width: 100%; }
+      .right-controls { width: 100%; justify-content: flex-start; }
+      .statbar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="wrap">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-left">
+          <div class="logo"><span class="logo-dot"></span> Study Quiz</div>
+          <div class="subtitle">Loads questions from <strong>questions.json</strong></div>
+        </div>
+
+        <div class="right-controls">
+          <select id="regionSelect" title="Region"></select>
+          <select id="topicSelect" title="Topic"></select>
+          <button id="startBtn" class="btn-primary">Start</button>
+          <button id="resetBtn" class="btn-ghost">Reset</button>
+        </div>
+      </div>
+
+      <div class="status">
+        <div id="status">Loading…</div>
+        <div class="row">
+          <span class="pill" id="progressPill"><span class="dot"></span>0 / 0</span>
+          <span class="pill" id="scorePill"><span class="dot"></span>Score: 0</span>
+        </div>
+      </div>
+
+      <div class="progress-wrap" aria-label="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>RMT Exam Quiz Bank</h1>
+      <p>
+        Clean, exam-style questions pulled from your notes. One concept per question. Explanations included.
+        Use <strong>Review</strong> to see what you missed and why.
+      </p>
+
+      <div class="statbar">
+        <div class="stat">
+          <div class="label">Questions loaded</div>
+          <div class="value" id="statLoaded">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Topic count</div>
+          <div class="value" id="statTopics">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Region count</div>
+          <div class="value" id="statRegions">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main card -->
+    <div class="card">
+      <!-- Quiz mode -->
+      <div id="quizArea" style="display:none;">
+        <div class="qhead">
+          <div class="topicLabel" id="topicLabel"></div>
+        </div>
+
+        <div class="stem" id="stem"></div>
+        <div class="options" id="options"></div>
+
+        <div class="row" style="margin-top: 12px;">
+          <button id="checkBtn" class="btn-primary" disabled>Check Answer</button>
+          <button id="nextBtn" class="btn-ghost" disabled>Next</button>
+          <button id="reviewMissedBtn" class="btn-ghost" disabled>Review Missed (Quiz)</button>
+        </div>
+
+        <div id="feedbackWrap"></div>
+      </div>
+
+      <!-- Done screen -->
+      <div id="doneArea" style="display:none;">
+        <div class="stem">Done.</div>
+        <div id="doneText" style="color: rgba(255,255,255,0.78); line-height: 1.6;"></div>
+
+        <div class="row" style="margin-top: 14px;">
+          <button class="btn-primary" id="restartBtn">Restart</button>
+          <button class="btn-ghost" id="reviewBtn" disabled>Review All</button>
+          <button class="btn-ghost" id="reviewMissedBtn2" disabled>Review Missed (Quiz)</button>
+        </div>
+
+        <div id="reviewArea" style="display:none;">
+          <div class="explainTitle" style="margin-top: 16px;">Question Review</div>
+          <div class="small" style="margin-top: 6px;">
+            Shows your selected answer vs the correct one, with explanation space for each.
+          </div>
+          <div class="review" id="reviewList"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hint">
+      If it won’t load from file:// run:
+      <code>python3 -m http.server 5173</code> then open <code>http://localhost:5173</code>
+    </div>
+  </div>
+
+<script>
+/**
+ * questions.json formats supported:
+ *
+ * 1) NEW (recommended) — self-contained choices (easy to shuffle safely)
+ * [
+ *  {
+ *    "topic":"Cervical",
+ *    "stem":"Question text",
+ *    "choices":[
+ *      {"text":"Option A","isCorrect":false,"explain":"why A wrong"},
+ *      {"text":"Option B","isCorrect":true, "explain":"why correct"},
+ *      {"text":"Option C","isCorrect":false,"explain":"why C wrong"},
+ *      {"text":"Option D","isCorrect":false,"explain":"why D wrong"}
+ *    ]
+ *  }
+ * ]
+ *
+ * 2) LEGACY (still supported)
+ * [
+ *  {
+ *    "topic":"Cervical",
+ *    "stem":"Question text",
+ *    "options":["A","B","C","D"],
+ *    "correctIndex":1,
+ *    "correctExplain":"Why correct",
+ *    "wrongExplains":["why A wrong","why B wrong","why C wrong","why D wrong"]
+ *  }
+ * ]
+ */
+
+let ALL = [];
+let pool = [];
+let missed = [];
+let idx = 0;
+let score = 0;
+let checked = false;
+let current = null;
+let selectedIndex = null;
+
+// Track all answers for the review screen
+// answersById[q.id] = chosenIndex
+let answersById = Object.create(null);
+
+const $ = (id) => document.getElementById(id);
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function normalizeNewChoices(rawChoices) {
+  if (!Array.isArray(rawChoices) || rawChoices.length !== 4) return null;
+
+  const choices = rawChoices.map((c) => ({
+    text: String(c?.text ?? ""),
+    isCorrect: Boolean(c?.isCorrect),
+    explain: String(c?.explain ?? "")
+  }));
+
+  // Must have exactly one correct choice
+  const correctCount = choices.filter(c => c.isCorrect).length;
+  if (correctCount !== 1) return null;
+
+  // Explanations must be non-empty (exam bank requirement)
+  if (choices.some(c => !c.explain || !c.explain.trim())) return null;
+
+  return choices;
+}
+
+function legacyToChoices(q) {
+  const options = Array.isArray(q.options) ? q.options : null;
+  const wrongExplains = Array.isArray(q.wrongExplains) ? q.wrongExplains : null;
+  const correctIndex = Number.isInteger(q.correctIndex) ? q.correctIndex : null;
+  const correctExplain = String(q.correctExplain ?? "");
+
+  if (!options || options.length !== 4) return null;
+  if (!wrongExplains || wrongExplains.length !== 4) return null;
+  if (correctIndex === null || correctIndex < 0 || correctIndex > 3) return null;
+  if (!correctExplain.trim()) return null;
+  if (wrongExplains.some(x => !String(x ?? "").trim())) return null;
+
+  return options.map((text, i) => ({
+    text: String(text),
+    isCorrect: i === correctIndex,
+    explain: i === correctIndex ? correctExplain : String(wrongExplains[i])
+  }));
+}
+
+function materialize(q) {
+  // Creates a per-display shuffled view of a question from its choices.
+  const shuffled = shuffle(q.choices);
+  const correctIndex = shuffled.findIndex(c => c.isCorrect);
+
+  return {
+    options: shuffled.map(c => c.text),
+    correctIndex,
+    correctExplain: shuffled[correctIndex]?.explain ?? "(No explanation provided.)",
+    wrongExplains: shuffled.map((c, i) => (i === correctIndex ? shuffled[correctIndex].explain : c.explain))
+  };
+}
+
+function setStatus(msg) { $("status").textContent = msg; }
+
+function updateProgressUI() {
+  const total = pool.length || 0;
+  const shown = total ? Math.min(idx + 1, total) : 0;
+
+  $("progressPill").innerHTML = `<span class="dot"></span>${shown} / ${total}`;
+  $("scorePill").innerHTML = `<span class="dot"></span>Score: ${score}`;
+
+  const pct = total ? Math.round(((shown - 1) / total) * 100) : 0;
+  // When at first question, bar = 0%. After checking/next, it moves.
+  $("progressBar").style.width = `${Math.max(0, Math.min(100, pct))}%`;
+}
+
+function topicsFrom(all) {
+  return ["ALL", ...Array.from(new Set(all.map(q => q.topic))).sort()];
+}
+
+function regionsFrom(all) {
+  return ["ALL", ...Array.from(new Set(all.map(q => q.region))).sort()];
+}
+
+function renderFilters() {
+  // Region
+  const rsel = $("regionSelect");
+  rsel.innerHTML = "";
+  for (const r of regionsFrom(ALL)) {
+    const opt = document.createElement("option");
+    opt.value = r;
+    opt.textContent = r;
+    rsel.appendChild(opt);
+  }
+
+  // Topic
+  const tsel = $("topicSelect");
+  tsel.innerHTML = "";
+  for (const t of topicsFrom(ALL)) {
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = t;
+    tsel.appendChild(opt);
+  }
+}
+
+function setStats() {
+  const topics = new Set(ALL.map(q => q.topic));
+  const regions = new Set(ALL.map(q => q.region));
+  $("statLoaded").textContent = `${ALL.length}+`;
+  $("statTopics").textContent = `${topics.size}`;
+  $("statRegions").textContent = `${regions.size}`;
+}
+
+function startQuiz({ useMissed=false } = {}) {
+  const region = $("regionSelect").value;
+  const topic = $("topicSelect").value;
+
+  const base = useMissed ? missed : ALL;
+
+  let filtered = base;
+  if (region !== "ALL") filtered = filtered.filter(q => q.region === region);
+  if (topic !== "ALL") filtered = filtered.filter(q => q.topic === topic);
+
+  pool = shuffle(filtered).slice(0, 20);
+  idx = 0;
+  score = 0;
+  checked = false;
+  if (!useMissed) missed = [];
+  current = null;
+  selectedIndex = null;
+  answersById = Object.create(null);
+
+  $("doneArea").style.display = "none";
+  $("quizArea").style.display = pool.length ? "block" : "none";
+  $("feedbackWrap").innerHTML = "";
+
+  $("reviewMissedBtn").disabled = true;
+  $("reviewMissedBtn2").disabled = true;
+  $("reviewBtn").disabled = true;
+  $("reviewArea").style.display = "none";
+  $("reviewList").innerHTML = "";
+
+  if (!pool.length) {
+    setStatus("No questions found for that topic.");
+    updateProgressUI();
+    $("progressBar").style.width = "0%";
+    return;
+  }
+
+  setStatus(`Running ${pool.length} questions`);
+  showQuestion();
+}
+
+function showQuestion() {
+  checked = false;
+  selectedIndex = null;
+  current = pool[idx];
+
+  // Build a shuffled view every time the question is shown
+  const view = materialize(current);
+  current._view = view;
+
+  $("topicLabel").textContent = `Topic: ${current.topic}`;
+  $("stem").textContent = current.stem;
+
+  const opts = $("options");
+  opts.innerHTML = "";
+
+  current._view.options.forEach((text, i) => {
+    const label = document.createElement("label");
+    label.className = "opt";
+    label.innerHTML = `
+      <input type="radio" name="opt" value="${i}" />
+      <span class="letter">${String.fromCharCode(65+i)}</span>
+      <div class="text">${escapeHtml(text)}</div>
+    `;
+    label.addEventListener("click", () => {
+      if (checked) return;
+      selectedIndex = i;
+      $("checkBtn").disabled = false;
+    });
+    opts.appendChild(label);
+  });
+
+  $("feedbackWrap").innerHTML = "";
+  $("checkBtn").disabled = true;
+  $("nextBtn").disabled = true;
+
+  // progress bar should reflect being on a question, but not "completed"
+  updateProgressUI();
+}
+
+function checkAnswer() {
+  if (selectedIndex === null || checked) return;
+  checked = true;
+
+  const correct = current._view.correctIndex;
+  const isCorrect = selectedIndex === correct;
+
+  // store for review screen
+  answersById[current._id] = selectedIndex;
+  // keep the shuffled view that was shown when answered
+  current._view = current._view || materialize(current);
+  current._chosenIndex = selectedIndex;
+
+  if (isCorrect) score++;
+  else missed.push(current);
+
+  const labels = Array.from(document.querySelectorAll(".opt"));
+  labels.forEach((lab, i) => {
+    lab.style.cursor = "default";
+    if (i === correct) lab.classList.add("ok");
+    if (i === selectedIndex && !isCorrect) lab.classList.add("bad");
+  });
+
+  const correctExplain = current._view.correctExplain || "(No explanation provided.)";
+  const wrongExplains = Array.isArray(current._view.wrongExplains) ? current._view.wrongExplains : ["","","",""];
+  const chosenExplain = wrongExplains[selectedIndex] || "(No explanation provided.)";
+
+  $("feedbackWrap").innerHTML = `
+    <div class="feedback">
+      <div class="feedbackTop">
+        <span class="badge ${isCorrect ? "ok" : "bad"}">${isCorrect ? "Correct" : "Incorrect"}</span>
+        <span style="color: rgba(255,255,255,0.75); font-size: 12px;">
+          Correct: <strong>${String.fromCharCode(65+correct)}</strong>
+        </span>
+      </div>
+
+      <div class="explainTitle">Why correct</div>
+      <div class="explainText">${escapeHtml(correctExplain)}</div>
+
+      ${isCorrect ? "" : `
+        <div class="explainTitle" style="margin-top:12px;">Why your choice is wrong</div>
+        <div class="explainText">${escapeHtml(chosenExplain)}</div>
+      `}
+    </div>
+  `;
+
+  $("nextBtn").disabled = false;
+  $("checkBtn").disabled = true;
+
+  $("reviewMissedBtn").disabled = missed.length === 0;
+  $("reviewMissedBtn2").disabled = missed.length === 0;
+
+  // move progress bar forward after answering (optional feeling)
+  // Here we show completed fraction including this question:
+  const total = pool.length || 1;
+  const completed = Math.min(idx + 1, total);
+  $("progressBar").style.width = `${Math.round((completed / total) * 100)}%`;
+
+  updateProgressUI();
+}
+
+function nextQuestion() {
+  if (idx + 1 >= pool.length) {
+    finish();
+    return;
+  }
+  idx++;
+  showQuestion();
+}
+
+function finish() {
+  $("quizArea").style.display = "none";
+  $("doneArea").style.display = "block";
+
+  $("doneText").innerHTML = `
+    Final score: <strong>${score}</strong> / <strong>${pool.length}</strong><br/>
+    Missed: <strong>${missed.length}</strong>
+  `;
+
+  $("reviewMissedBtn2").disabled = missed.length === 0;
+  $("reviewBtn").disabled = pool.length === 0;
+
+  setStatus("Finished.");
+  $("progressBar").style.width = "100%";
+}
+
+function renderReview({ onlyMissed=false } = {}) {
+  const list = $("reviewList");
+  list.innerHTML = "";
+
+  const toShow = onlyMissed ? missed : pool;
+
+  toShow.forEach((q, i) => {
+    const chosen = q._chosenIndex;
+    const view = q._view || materialize(q);
+    const correct = view.correctIndex;
+    const gotIt = chosen === correct;
+
+    const chosenLetter = Number.isInteger(chosen) ? String.fromCharCode(65 + chosen) : "—";
+    const correctLetter = String.fromCharCode(65 + correct);
+
+    const chosenText = Number.isInteger(chosen) ? view.options[chosen] : "(No answer)";
+    const correctText = view.options[correct];
+
+    const correctExplain = (q._view?.correctExplain) || "(No explanation provided.)";
+    const wrongExplains = Array.isArray(q._view?.wrongExplains) ? q._view.wrongExplains : ["","","",""];
+    const chosenExplain = Number.isInteger(chosen) ? (wrongExplains[chosen] || "(No explanation provided.)") : "(No answer provided.)";
+
+    const card = document.createElement("div");
+    card.className = "review-card";
+    card.innerHTML = `
+      <div class="review-head">
+        <div>
+          <div class="small">Q${i + 1} • ${escapeHtml(q.topic)}</div>
+          <div class="review-qtitle" style="margin-top:6px;">${escapeHtml(q.stem)}</div>
+        </div>
+        <span class="badge ${gotIt ? "ok" : "bad"}">${gotIt ? "Correct" : "Incorrect"}</span>
+      </div>
+
+      <div class="kv">
+        <div><strong>Your answer:</strong> ${escapeHtml(chosenLetter)} — ${escapeHtml(chosenText)}</div>
+        <div><strong>Correct answer:</strong> ${escapeHtml(correctLetter)} — ${escapeHtml(correctText)}</div>
+
+        <div style="margin-top:6px;">
+          <div class="explainTitle">Why correct</div>
+          <div class="explainText">${escapeHtml(correctExplain)}</div>
+        </div>
+
+        <div style="margin-top:6px;">
+          <div class="explainTitle">Why your choice is wrong</div>
+          <div class="explainText">${escapeHtml(chosenExplain)}</div>
+        </div>
+      </div>
+    `;
+    list.appendChild(card);
+  });
+
+  $("reviewArea").style.display = "block";
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+/* ===== Wiring ===== */
+$("startBtn").addEventListener("click", () => startQuiz({ useMissed:false }));
+
+$("resetBtn").addEventListener("click", () => {
+  idx = 0; score = 0; checked = false; selectedIndex = null; pool = []; missed = [];
+  current = null;
+  answersById = Object.create(null);
+
+  $("quizArea").style.display = "none";
+  $("doneArea").style.display = "none";
+  $("feedbackWrap").innerHTML = "";
+  $("reviewArea").style.display = "none";
+  $("reviewList").innerHTML = "";
+
+  setStatus("Reset. Choose a topic and press Start.");
+  $("progressPill").innerHTML = `<span class="dot"></span>0 / 0`;
+  $("scorePill").innerHTML = `<span class="dot"></span>Score: 0`;
+  $("progressBar").style.width = "0%";
+});
+
+$("checkBtn").addEventListener("click", checkAnswer);
+$("nextBtn").addEventListener("click", nextQuestion);
+
+$("reviewMissedBtn").addEventListener("click", () => startQuiz({ useMissed:true }));
+$("reviewMissedBtn2").addEventListener("click", () => startQuiz({ useMissed:true }));
+
+$("restartBtn").addEventListener("click", () => startQuiz({ useMissed:false }));
+
+$("reviewBtn").addEventListener("click", () => {
+  // Prepare chosen indexes for pool items (for review)
+  pool.forEach(q => { q._chosenIndex = q._chosenIndex ?? null; });
+  renderReview({ onlyMissed:false });
+});
+
+/* ===== Load JSON ===== */
+// Normalize + add internal ids (supports NEW choices[] and LEGACY schema)
+(async function init() {
+  try {
+    const res = await fetch("./questions.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(`Failed to load questions.json (${res.status})`);
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error("questions.json must be an array");
+
+    // Normalize + add internal ids (supports NEW choices[] and LEGACY schema)
+    ALL = data.map((q, i) => {
+      const region = q.region ?? "General";
+      const topic = q.topic ?? "General";
+      const stem = q.stem ?? `Question ${i+1}`;
+
+      // Prefer new schema when present
+      const choices = normalizeNewChoices(q.choices) || legacyToChoices(q);
+      if (!choices) return null;
+
+      return {
+        _id: `q_${i}_${Math.random().toString(16).slice(2)}`,
+        region: String(region),
+        topic: String(topic),
+        stem: String(stem),
+        choices,
+        _chosenIndex: null,
+        _view: null
+      };
+    }).filter(Boolean);
+
+    renderFilters();
+    setStats();
+
+    if (!ALL.length) {
+      setStatus("Loaded 0 questions. Add questions to questions.json.");
+      return;
+    }
+
+    setStatus(`Loaded ${ALL.length} questions. Pick a topic and press Start.`);
+    $("progressPill").innerHTML = `<span class="dot"></span>0 / ${Math.min(20, ALL.length)}`;
+    $("progressBar").style.width = "0%";
+  } catch (err) {
+    console.error(err);
+    setStatus(`Error: ${err.message || err}`);
+    $("progressBar").style.width = "0%";
+  }
+})();
+
+</script>
+</body>
+</html>
+
+// Optional UX: when region changes, reset topic to ALL and update status text.
+$("regionSelect").addEventListener("change", () => {
+  // Keep topic list global (not region-scoped), but reset topic to ALL when region changes
+  $("topicSelect").value = "ALL";
+  setStatus(`Filter set: Region = ${$("regionSelect").value}, Topic = ${$("topicSelect").value}`);
+});
+
+$("topicSelect").addEventListener("change", () => {
+  setStatus(`Filter set: Region = ${$("regionSelect").value}, Topic = ${$("topicSelect").value}`);
+});
