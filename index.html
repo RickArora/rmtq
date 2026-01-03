@@ -448,16 +448,17 @@
 
   <div class="wrap">
     <!-- Topbar -->
-    <!-- <div class="topbar">
+    <div class="topbar">
       <div class="brand">
         <div class="brand-left">
           <div class="logo"><span class="logo-dot"></span> Study Quiz</div>
           <div class="subtitle">Loads questions from <strong>questions.json</strong></div>
-        </div> -->
+        </div>
 
         <div class="right-controls">
-          <select id="regionSelect" title="Region"></select>
+          <select id="examSelect" title="Exam"></select>
           <select id="topicSelect" title="Topic"></select>
+          <select id="sectionSelect" title="Subsection"></select>
           <button id="startBtn" class="btn-primary">Start</button>
           <button id="resetBtn" class="btn-ghost">Reset</button>
         </div>
@@ -490,11 +491,11 @@
           <div class="value" id="statLoaded">—</div>
         </div>
         <div class="stat">
-          <div class="label">Topic count</div>
+          <div class="label">Topic groups</div>
           <div class="value" id="statTopics">—</div>
         </div>
         <div class="stat">
-          <div class="label">Region count</div>
+          <div class="label">Subsection count</div>
           <div class="value" id="statRegions">—</div>
         </div>
       </div>
@@ -667,53 +668,99 @@ function updateProgressUI() {
   $("progressBar").style.width = `${Math.max(0, Math.min(100, pct))}%`;
 }
 
-function topicsFrom(all) {
-  return ["ALL", ...Array.from(new Set(all.map(q => q.topic))).sort()];
+function examsFrom(all) {
+  const set = new Set(all.map(q => q.exam));
+  const arr = Array.from(set);
+  arr.sort((a, b) => {
+    const order = { "MCQ": 0, "OSCE": 1 };
+    const oa = order[a] ?? 99;
+    const ob = order[b] ?? 99;
+    if (oa !== ob) return oa - ob;
+    return String(a).localeCompare(String(b));
+  });
+  return ["ALL", ...arr];
 }
 
-function regionsFrom(all) {
-  return ["ALL", ...Array.from(new Set(all.map(q => q.region))).sort()];
+function topicGroupsFrom(all, exam) {
+  let filtered = all;
+  if (exam && exam !== "ALL") filtered = filtered.filter(q => q.exam === exam);
+
+  const set = new Set(filtered.map(q => q.topicGroup));
+  const preferred = ["Assessment", "Massage Techniques", "RemEx"];
+  const arr = Array.from(set);
+
+  arr.sort((a, b) => {
+    const ia = preferred.indexOf(a);
+    const ib = preferred.indexOf(b);
+    const oa = ia === -1 ? 99 : ia;
+    const ob = ib === -1 ? 99 : ib;
+    if (oa !== ob) return oa - ob;
+    return String(a).localeCompare(String(b));
+  });
+
+  return ["ALL", ...arr];
+}
+
+function sectionsFrom(all, exam, topicGroup) {
+  let filtered = all;
+  if (exam && exam !== "ALL") filtered = filtered.filter(q => q.exam === exam);
+  if (topicGroup && topicGroup !== "ALL") filtered = filtered.filter(q => q.topicGroup === topicGroup);
+  return ["ALL", ...Array.from(new Set(filtered.map(q => q.section))).sort()];
 }
 
 function renderFilters() {
-  // Region
-  const rsel = $("regionSelect");
-  rsel.innerHTML = "";
-  for (const r of regionsFrom(ALL)) {
+  // Exam
+  const esel = $("examSelect");
+  esel.innerHTML = "";
+  for (const e of examsFrom(ALL)) {
     const opt = document.createElement("option");
-    opt.value = r;
-    opt.textContent = r;
-    rsel.appendChild(opt);
+    opt.value = e;
+    opt.textContent = e;
+    esel.appendChild(opt);
   }
 
-  // Topic
+  // Topic group (depends on exam)
   const tsel = $("topicSelect");
+  const currentExam = esel.value || "ALL";
   tsel.innerHTML = "";
-  for (const t of topicsFrom(ALL)) {
+  for (const t of topicGroupsFrom(ALL, currentExam)) {
     const opt = document.createElement("option");
     opt.value = t;
     opt.textContent = t;
     tsel.appendChild(opt);
   }
+
+  // Subsection (depends on exam + topic)
+  const ssel = $("sectionSelect");
+  const currentTopic = tsel.value || "ALL";
+  ssel.innerHTML = "";
+  for (const s of sectionsFrom(ALL, currentExam, currentTopic)) {
+    const opt = document.createElement("option");
+    opt.value = s;
+    opt.textContent = s;
+    ssel.appendChild(opt);
+  }
 }
 
 function setStats() {
-  const topics = new Set(ALL.map(q => q.topic));
-  const regions = new Set(ALL.map(q => q.region));
-  $("statLoaded").textContent = `${ALL.length}+`;
-  $("statTopics").textContent = `${topics.size}`;
-  $("statRegions").textContent = `${regions.size}`;
+  const topicGroups = new Set(ALL.map(q => q.topicGroup));
+  const sections = new Set(ALL.map(q => q.section));
+  $("statLoaded").textContent = `${ALL.length}`;
+  $("statTopics").textContent = `${topicGroups.size}`;
+  $("statRegions").textContent = `${sections.size}`;
 }
 
 function startQuiz({ useMissed=false } = {}) {
-  const region = $("regionSelect").value;
-  const topic = $("topicSelect").value;
+  const exam = $("examSelect").value;
+  const topicGroup = $("topicSelect").value;
+  const section = $("sectionSelect").value;
 
   const base = useMissed ? missed : ALL;
 
   let filtered = base;
-  if (region !== "ALL") filtered = filtered.filter(q => q.region === region);
-  if (topic !== "ALL") filtered = filtered.filter(q => q.topic === topic);
+  if (exam !== "ALL") filtered = filtered.filter(q => q.exam === exam);
+  if (topicGroup !== "ALL") filtered = filtered.filter(q => q.topicGroup === topicGroup);
+  if (section !== "ALL") filtered = filtered.filter(q => q.section === section);
 
   pool = shuffle(filtered).slice(0, 20);
   idx = 0;
@@ -735,7 +782,7 @@ function startQuiz({ useMissed=false } = {}) {
   $("reviewList").innerHTML = "";
 
   if (!pool.length) {
-    setStatus("No questions found for that topic.");
+    setStatus("No questions found for those filters.");
     updateProgressUI();
     $("progressBar").style.width = "0%";
     return;
@@ -754,7 +801,10 @@ function showQuestion() {
   const view = materialize(current);
   current._view = view;
 
-  $("topicLabel").textContent = `Topic: ${current.topic}`;
+  const meta = `${current.exam} • ${current.topicGroup} • ${current.section}`;
+  $("topicLabel").textContent = current.muscle
+    ? `${meta} • Muscle: ${current.muscle}`
+    : meta;
   $("stem").textContent = current.stem;
 
   const opts = $("options");
@@ -897,7 +947,7 @@ function renderReview({ onlyMissed=false } = {}) {
     card.innerHTML = `
       <div class="review-head">
         <div>
-          <div class="small">Q${i + 1} • ${escapeHtml(q.topic)}</div>
+          <div class="small">Q${i + 1} • ${escapeHtml(q.exam)} • ${escapeHtml(q.topicGroup)} • ${escapeHtml(q.section)}</div>
           <div class="review-qtitle" style="margin-top:6px;">${escapeHtml(q.stem)}</div>
         </div>
         <span class="badge ${gotIt ? "ok" : "bad"}">${gotIt ? "Correct" : "Incorrect"}</span>
@@ -935,6 +985,47 @@ function escapeHtml(str) {
 
 /* ===== Wiring ===== */
 $("startBtn").addEventListener("click", () => startQuiz({ useMissed:false }));
+
+$("examSelect").addEventListener("change", () => {
+  const e = $("examSelect").value;
+
+  // rebuild topic groups
+  const tsel = $("topicSelect");
+  tsel.innerHTML = "";
+  for (const t of topicGroupsFrom(ALL, e)) {
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = t;
+    tsel.appendChild(opt);
+  }
+  tsel.value = "ALL";
+
+  // rebuild sections
+  const ssel = $("sectionSelect");
+  ssel.innerHTML = "";
+  for (const s of sectionsFrom(ALL, e, "ALL")) {
+    const opt = document.createElement("option");
+    opt.value = s;
+    opt.textContent = s;
+    ssel.appendChild(opt);
+  }
+  ssel.value = "ALL";
+});
+
+$("topicSelect").addEventListener("change", () => {
+  const e = $("examSelect").value;
+  const t = $("topicSelect").value;
+
+  const ssel = $("sectionSelect");
+  ssel.innerHTML = "";
+  for (const s of sectionsFrom(ALL, e, t)) {
+    const opt = document.createElement("option");
+    opt.value = s;
+    opt.textContent = s;
+    ssel.appendChild(opt);
+  }
+  ssel.value = "ALL";
+});
 
 $("resetBtn").addEventListener("click", () => {
   idx = 0; score = 0; checked = false; selectedIndex = null; pool = []; missed = [];
@@ -978,8 +1069,12 @@ $("reviewBtn").addEventListener("click", () => {
 
     // Normalize + add internal ids (supports NEW choices[] and LEGACY schema)
     ALL = data.map((q, i) => {
+      const exam = String(q.exam ?? "MCQ");
+      const bank = String(q.bank ?? "");
+      const topicGroup = String(q.topicGroup ?? q.topic2 ?? (bank === "RemEx" ? "RemEx" : "Assessment"));
+      const section = String(q.section ?? q.bucket ?? q.region ?? "General");
       const region = q.region ?? "General";
-      const topic = q.topic ?? "General";
+      const muscle = String(q.topic ?? "General");
       const stem = q.stem ?? `Question ${i+1}`;
 
       // Prefer new schema when present
@@ -988,8 +1083,11 @@ $("reviewBtn").addEventListener("click", () => {
 
       return {
         _id: `q_${i}_${Math.random().toString(16).slice(2)}`,
+        exam,
+        topicGroup,
+        section,
         region: String(region),
-        topic: String(topic),
+        muscle,
         stem: String(stem),
         choices,
         _chosenIndex: null,
