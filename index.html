@@ -448,12 +448,12 @@
 
   <div class="wrap">
     <!-- Topbar -->
-    <div class="topbar">
+    <!-- <div class="topbar">
       <div class="brand">
         <div class="brand-left">
           <div class="logo"><span class="logo-dot"></span> Study Quiz</div>
           <div class="subtitle">Loads questions from <strong>questions.json</strong></div>
-        </div>
+        </div> -->
 
         <div class="right-controls">
           <select id="regionSelect" title="Region"></select>
@@ -1018,14 +1018,3 @@ $("reviewBtn").addEventListener("click", () => {
 </script>
 </body>
 </html>
-
-// Optional UX: when region changes, reset topic to ALL and update status text.
-$("regionSelect").addEventListener("change", () => {
-  // Keep topic list global (not region-scoped), but reset topic to ALL when region changes
-  $("topicSelect").value = "ALL";
-  setStatus(`Filter set: Region = ${$("regionSelect").value}, Topic = ${$("topicSelect").value}`);
-});
-
-$("topicSelect").addEventListener("change", () => {
-  setStatus(`Filter set: Region = ${$("regionSelect").value}, Topic = ${$("topicSelect").value}`);
-});
