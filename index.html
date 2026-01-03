@@ -1005,7 +1005,7 @@ $("reviewBtn").addEventListener("click", () => {
       return;
     }
 
-    setStatus(`${`Pick a topic and press Start.`);
+    setStatus(`Pick a topic and press Start.`);
     $("progressPill").innerHTML = `<span class="dot"></span>0 / ${Math.min(20, ALL.length)}`;
     $("progressBar").style.width = "0%";
   } catch (err) {
